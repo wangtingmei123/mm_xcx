@@ -1,0 +1,81 @@
+<view class="pagebg"><image src="https://www.xindongguoji.com/static/image/images/03index_bg_02.png" ></image></view>
+
+<view class="pade_view ">
+      <view class="logo">
+        <!-- <image src="/static/images/xindong.png" class="logo__imga" bindload="imageLoad" data-index="{{ index }}" 
+      style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;"></image> -->
+          <image class="logo1" bindload="imageLoad" data-index="{{ index }}"  style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;" wx:if="{{logo!=''&&logo_location==1}}"  src="https://i.xindongguoji.com/{{logo}}"></image>
+          <image class="logo2" bindload="imageLoad" data-index="{{ index }}"  style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;"  wx:if="{{logo!=''&&logo_location==2}}"  src="https://i.xindongguoji.com/{{logo}}"></image>
+          <image class="logo3" bindload="imageLoad" data-index="{{ index }}"  style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;"  wx:if="{{logo!=''&&logo_location==3}}"  src="https://i.xindongguoji.com/{{logo}}"></image>
+
+
+           <!-- <image  class="logo1" bindload="imageLoad" data-index="{{ index }}"  style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;"  wx:if="{{logo==''}}"  src="../../static/images/images/mo_logo.png"></image> -->
+
+      </view>
+
+    <view class="title"  >{{company_name}}</view>
+
+    <view class="circle-box">
+          <canvas class="canvas1" canvas-id="canvasArc" style="width:{{width_c}}px;height:{{height_c}}px;"></canvas>
+          <canvas class="canvas" canvas-id="canvasProgressbg" style="width:{{width_c}}px;height:{{height_c}}px;"></canvas>
+
+          <view class="circle">
+              <view class="tit" wx:if="{{activity_id != 15}}">目标 {{target_walk}}</view>
+   
+            <view class="num">{{current_step}}</view>
+            <view class="object">今日步数</view>
+            <view class="date">{{current_date}}</view>
+          </view>
+          <!-- <view  bindtap="toPersonalResult" class="dangqian_but">
+              <image src="../../static/images/images/03index_07.png"></image>
+              <text>当前成绩</text>
+          </view> -->
+    </view>
+
+    <view class="data">
+        <view class="data-item">
+            <image src="/static/images/images/03index_18.png" style='width:28rpx'></image>
+            <view class="num">总公里数：{{km_txt}}</view>
+        </view>
+        <view class="data-item">
+            <image src="/static/images/images/03index_15.png" style='width:32rpx'></image>
+            <view class="num">消 耗：{{joule_txt}}</view>
+        </view>
+        <view class="data-item">
+            <image src="/static/images/images/03index_21.png" style='width:30rpx'></image>
+            <view class="num num2">能 量：{{food_txt}}</view>
+        </view>
+    </view>
+
+</view>
+
+
+<!-- <view class="title" wx:if="{{activity_id == 6}}" bindtap='toRankingList'>鑫动员工健步走活动</view>
+<view class="circle-box">
+  <canvas class="canvas" canvas-id="canvasArc"></canvas>
+  <view class="circle">
+    <view class="tit">今日步数</view>
+    <view class="object" wx:if="{{activity_id != 15}}">目标{{target_step}}</view>
+    <view class="num">{{current_step}}</view>
+    <view class="date">{{current_date}}</view>
+  </view>
+  <view data-url="/pages/activity/activity" bindtap="toPersonalResult" class="button">当前成绩</view>
+</view>
+
+<view class="data">
+  <view class="data-item">
+    <image src="/static/images/icon1.png"></image>
+    <view class="num">{{km_txt}}</view>
+    <view class="name">总公里数</view>
+  </view>
+  <view class="data-item">
+    <image src="/static/images/icon3.png"></image>
+    <view class="num">{{joule_txt}}</view>
+    <view class="name">消 耗</view>
+  </view>
+  <view class="data-item">
+    <image src="/static/images/star.png"></image>
+    <view class="num num2">{{food_txt}}</view>
+    <view class="name">能 量</view>
+  </view>
+</view> -->

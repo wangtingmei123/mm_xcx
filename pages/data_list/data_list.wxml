@@ -1,0 +1,69 @@
+<!--pages/data_list/data_list.wxml-->
+
+<view class="flex">
+    <view class="yue_title">
+      <view class="yue_box">
+
+ 
+              <view class="yue_img" bindtap='to_last' wx:if="{{now_mon>0}}"><image src="../../static/images/images/07jiantou_03.png"></image></view>
+              <view class="yue_t">
+                    {{arr_mon[now_mon].name}}月
+              </view>
+              <view class="yue_img yue_img1" bindtap='to_next' wx:if="{{now_mon<arr_mon.length-1}}"><image src="../../static/images/images/07jiantou_05.png"></image></view>
+
+
+        </view>
+    </view>
+
+
+
+    <view class='box1' style='width: {{ sysW * 7 }}px'>
+      <view class="week_box">
+          <block wx:for='{{ weekArr }}' wx:key="index" >
+            <view class="week_tip" style='width: {{ sysW }}px;' >{{ item }}</view>
+          </block>
+        </view>
+      <view class="fenge"></view>
+      <view class="riqi_box">
+      <block wx:for='{{ arr }}' wx:key="index" >
+        <view style='{{ index == 0 ? "margin-left:" + sysW * marLet + "px;" : "" }}width: {{ sysW }}px' class='riqi' bindtap='to_show' data-info="{{item}}">{{ item.name }}
+        <view class="dateOn" wx:if="{{item.name ==  getDate}}">{{ item.name }}</view>
+        <view class="dabiao" wx:if="{{item.name ==  getDate&&pass==1}}"><image src="../../static/images/images/07data_10.png"></image></view>
+          <view class="zhezhao" wx:if="{{item.show==false}}"></view>
+
+        </view>
+
+      </block>
+      </view>
+    </view>
+
+
+    <view class="me_pai">
+        <view class="pai_left">
+            <image  wx:if="{{data_rank[0].head_img!=''}}"  src="{{data_rank[0].head_img}}"></image>
+            <image  wx:if="{{data_rank[0].head_img==''}}"  src="../../static/images/images/user.png"></image>
+            <text>夺得{{to_day+1}}月{{getDate}}日排行榜冠军</text>
+        </view>
+        <view class="pai_right">您的排名：{{ranking}}</view>
+    </view>
+</view>
+
+ <scroll-view class="tabcont {{to_day==5||to_day==2?'tabcont_member':''}} tabcont__member" 
+            scroll-y="true"
+            lower-threshold="50"
+            bindscrolltolower="getRankingList" >
+        <view class="tabcont_item" wx:for="{{data_rank}}" wx:key="index">                 
+              <view class="cont_item_left">                 
+                  <text class="item_num">{{index+1}}</text>
+                  <image class="photo_img" wx:if="{{item.head_img!=''}}"  src="{{item.head_img}}"></image>
+                  <image  class="photo_img" wx:if="{{item.head_img==''}}" src="../../static/images/images/user.png"></image>
+                  <view class="name_box">
+                    <view class="name">{{item.real_name}}</view>
+                    <view class="bumen">{{item.department_name}}</view>
+                  </view>
+              </view>
+              <view  class="cont_item_right">{{item.step_num}} </view>
+        </view>
+
+    </scroll-view>
+

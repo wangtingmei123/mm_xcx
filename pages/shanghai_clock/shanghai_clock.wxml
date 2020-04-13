@@ -1,0 +1,58 @@
+
+      <view class='hid_bg_box'>
+        <!-- <view class='hid_item' wx:for="{{target_address_list}}" bindtap="to_hit" data-info="{{item}}" wx:key='idx'>
+          {{item.address_name}}
+        </view> -->
+
+         <image class='hid_bg_img' src="https://www.xindongguoji.com/static/image/images/04-70_sh.png"></image>
+         <view class='hid_center'>
+             <image class='hid_center_img' src="https://www.xindongguoji.com/static/image/images/shanghai_center_02.png"></image>
+
+             <view class='daka_box' wx:for="{{target_address_list}}" wx:key='idx' wx:if="{{index==0}}" bindtap="to_hit" data-info="{{item}}" >
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/morenm1.png" wx:if="{{item.is_hitcard==0}}"></image>
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/select_moren1.png" wx:if="{{item.is_hitcard==1}}"></image>
+             </view>
+             <view class='daka_box' wx:for="{{target_address_list}}" wx:key='idx' wx:if="{{index==1}}" data-info="{{item}}" bindtap="to_hit">
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/morenm2.png" wx:if="{{item.is_hitcard==0}}"></image>
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/select_moren2.png" wx:if="{{item.is_hitcard==1}}"></image>
+              </view>
+             <view class='daka_box' wx:for="{{target_address_list}}" wx:key='idx' wx:if="{{index==2}}" data-info="{{item}}" bindtap="to_hit">
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/morenm3.png" wx:if="{{item.is_hitcard==0}}"></image>
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/select_moren3.png" wx:if="{{item.is_hitcard==1}}"></image>
+             </view>
+             <view class='daka_box' wx:for="{{target_address_list}}" wx:key='idx' wx:if="{{index==3}}" data-info="{{item}}" bindtap="to_hit">
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/morenm4.png" wx:if="{{item.is_hitcard==0}}"></image>
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/select_moren4.png" wx:if="{{item.is_hitcard==1}}"></image>
+             </view>
+             <view class='daka_box' wx:for="{{target_address_list}}" wx:key='idx' wx:if="{{index==4}}" data-info="{{item}}" bindtap="to_hit">
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/morenm5.png" wx:if="{{item.is_hitcard==0}}"></image>
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/select_moren5.png" wx:if="{{item.is_hitcard==1}}"></image>
+             </view>
+             <view class='daka_box' wx:for="{{target_address_list}}" wx:key='idx' wx:if="{{index==5}}" data-info="{{item}}" bindtap="to_hit">
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/morenm6.png" wx:if="{{item.is_hitcard==0}}"></image>
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/select_moren6.png" wx:if="{{item.is_hitcard==1}}"></image>
+             </view>
+             <view class='daka_box' wx:for="{{target_address_list}}" wx:key='idx' wx:if="{{index==6}}" data-info="{{item}}" bindtap="to_hit">
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/morenm7.png" wx:if="{{item.is_hitcard==0}}"></image>
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/select_moren7.png" wx:if="{{item.is_hitcard==1}}"></image>
+             </view>
+             <view class='daka_box' wx:for="{{target_address_list}}" wx:key='idx' wx:if="{{index==7}}" data-info="{{item}}" bindtap="to_hit">
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/morenm8.png" wx:if="{{item.is_hitcard==0}}"></image>
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/select_moren8.png" wx:if="{{item.is_hitcard==1}}"></image>
+             </view>
+             <view class='daka_box' wx:for="{{target_address_list}}" wx:key='idx' wx:if="{{index==8}}" data-info="{{item}}" bindtap="to_hit">
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/morenm9.png" wx:if="{{item.is_hitcard==0}}"></image>
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/select_moren9.png" wx:if="{{item.is_hitcard==1}}"></image>
+             </view>
+             <view class='daka_box' wx:for="{{target_address_list}}" wx:key='idx' wx:if="{{index==9}}" data-info="{{item}}" bindtap="to_hit">
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/morenm10.png" wx:if="{{item.is_hitcard==0}}"></image>
+                 <image class='daka_img' src="https://www.xindongguoji.com/static/image/images/shanghai/select_moren10.png" wx:if="{{item.is_hitcard==1}}"></image>
+             </view>
+          
+         </view>
+      
+      </view>
+
+
+
+

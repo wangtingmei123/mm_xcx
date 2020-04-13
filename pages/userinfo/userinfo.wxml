@@ -1,0 +1,22 @@
+<!--pages/userinfo/userinfo.wxml-->
+<!-- <text>pages/userinfo/userinfo.wxml</text> -->
+<view class='container'>
+
+<view class="login_logo">
+     <image src="../../static/images/images/27logo1_03.png"></image>
+     <view class="logo_tip">健步走</view>
+</view>
+
+<view class="login-box">
+    <view class="get_tip">为了给您提供完整功能需要获取以下权限</view>
+    <view class="get_tip_info"  bindtap='to_radio'>
+    <view class="radio {{radio_show?'radioa':''}}"></view>
+
+
+    <text>获得你的公开信息 （昵称、头像等）</text></view>
+    <!-- <image class="login-img" src="../img/index/logo.png"></image> -->
+     <button wx:if="{{radio_show==false}}"  class="login1 login2"  >授权微信用户信息</button>
+    <button wx:if="{{radio_show}}" open-type="getUserInfo" class="login1 "  bindgetuserinfo="bindGetUserInfo">授权微信用户信息</button>
+</view>
+
+</view>

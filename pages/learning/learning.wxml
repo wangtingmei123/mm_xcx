@@ -1,0 +1,121 @@
+<!--pages/learning/learning.wxml-->
+<view class="learning_box" wx:if="{{is_show==1}}">
+   <image class="learn_bg" wx:if="{{answer_image!=''}}" src="https://i.xindongguoji.com/{{answer_image}}" mode="widthFix"></image>
+      <image class="learn_bg" wx:if="{{answer_image=='' || answer_image==undefined}}" src="" mode="widthFix"></image>
+
+   <view class="lear_box">
+     <view wx:if="{{answer_rule.length>0}}" class="lear_tip" bindtap='hide_ts'></view>
+      <view class="lear_main">
+
+        <view class="lear_main_but  {{item.is_answer==1?'lear_main_but1':''}} {{index>15?'lear_main_but1a':''}} {{index>35?'lear_main_but1b':''}}" wx:for="{{lears}}" wx:key="index"   data-info="{{item}}"   data-index="{{index}}">
+                  <image wx:if="{{item.is_answer==1&&is_bindtap==true}}" src="../../static/images/images/18lear_but_03.png" bindtap='show_lear' data-info="{{item}}"   data-index="{{index}}"></image>
+                    <image wx:if="{{item.is_answer==1&&is_bindtap==false}}" src="../../static/images/images/18lear_but_03.png" data-info="{{item}}"   data-index="{{index}}"></image>
+                   <image wx:if="{{item.is_answer==0}}" src="../../static/images/images/18lear_but_07.png" bindtap='show_lear' data-info="{{item}}"   data-index="{{index}}"></image>
+
+                  <view class='lear_time'>第<text>{{index+1}}</text>天</view>
+                    <image wx:if="{{item.is_today==1&&is_over==0}}" class="lear_gif" src="../../static/images/images/datijiantou.gif"></image>
+                  <view wx:if="{{index>today&&is_over==0}}" class="zhezhao"></view>
+         </view>
+
+      </view>
+   </view>
+</view>
+
+
+
+<view class="learning_box learning_box1" wx:if="{{is_show==2}}">
+   <image class="learn_bg" wx:if="{{answer_image!=''}}" src="https://i.xindongguoji.com/{{answer_image}}" mode="widthFix"></image>
+      <image class="learn_bg" wx:if="{{answer_image=='' || answer_image==undefined}}"  src="https://www.xindongguoji.com/static/image/images/3learing_bg_02.jpg" mode="widthFix"></image>
+
+   <view class="lear_box">
+     <view wx:if="{{answer_rule.length>0}}" class="lear_tip" bindtap='hide_ts'></view>
+      <view class="lear_main">
+
+        <view class="lear_main_but  {{item.is_answer==1?'lear_main_but1':''}} {{index>15?'lear_main_but1a':''}}" wx:for="{{lears}}" wx:key="index"   data-info="{{item}}"   data-index="{{index}}">
+                  <image wx:if="{{item.is_answer==1&&item.is_target==0}}" src="../../static/images/images/3learing_07.png" bindtap='show_lear' data-info="{{item}}"   data-index="{{index}}"></image>
+                  <image wx:if="{{item.is_answer==1&&item.is_target==1}}" src="../../static/images/images/3learing_10.png" bindtap='show_lear' data-info="{{item}}"   data-index="{{index}}"></image>
+                   <image wx:if="{{item.is_answer==0}}" src="../../static/images/images/3learing_03.png" bindtap='show_lear' data-info="{{item}}"   data-index="{{index}}"></image>
+
+                  <view class='lear_time lear_timeaa'>  <image wx:if="{{item.is_answer==0&&index<today}}" src="../../static/images/images/3icon_btn_03.png"></image>  {{item.title}}</view>
+                    <image wx:if="{{item.is_today==1}}" class="lear_gif" src="../../static/images/images/3lear_today_03.png"></image>
+                  <view wx:if="{{index>today}}" class="zhezhao"></view>
+         </view>
+
+      </view>
+   </view>
+</view>
+
+
+
+
+<view class="learning_box learning_box3" wx:if="{{is_show==3}}">
+   <image class="learn_bg" wx:if="{{answer_image!=''}}" src="https://i.xindongguoji.com/{{answer_image}}" mode="widthFix"></image>
+      <image class="learn_bg"  wx:if="{{answer_image=='' || answer_image==undefined}}"   src="../../static/images/images/3shanghai_lear_02_01.jpg" mode="widthFix"></image>
+
+    <view class="lear_box lear_box3">
+     <view  class="lear_tip" bindtap='hide_ts'></view>
+      <view class="lear_main">
+
+        <view class="lear_main_but  {{item.is_answer==1?'lear_main_but1':''}}" wx:for="{{lears}}" wx:key="index"   data-info="{{item}}"   data-index="{{index}}">
+                          
+                   <image wx:if="{{item.is_answer==1&&is_bindtap==true}}" src="../../static/images/images/18lear_but_03.png" bindtap='show_lear' data-info="{{item}}"   data-index="{{index}}"></image>
+                    <image wx:if="{{item.is_answer==1&&is_bindtap==false}}" src="../../static/images/images/18lear_but_03.png" data-info="{{item}}"   data-index="{{index}}"></image>
+                   <image wx:if="{{item.is_answer==0}}" src="../../static/images/images/18lear_but_07.png" bindtap='show_lear' data-info="{{item}}"   data-index="{{index}}"></image>
+
+                  <view class='lear_time lear_timeaa'>第<text>{{index+1}}</text>题</view>
+                  <!-- <view wx:if="{{index>today}}" class="zhezhao"></view> -->
+         </view>
+
+      </view>
+   </view>
+</view>
+
+
+
+
+
+<view class="tishi_box" bindtap='hide_ts' wx:if="{{tishi==true}}">
+   <view class="tishi">
+       <view class="ts_top">答题说明</view>
+       <view class="ts_center">
+           <view class="tsc">
+              <!-- <view class="tsc_left">1</view> -->
+              <image class="answer_rule" mode="widthFix" src="https://i.xindongguoji.com/{{answer_rule}}"></image>
+              <!-- <view class="tsc_main">{{answer_rule}}</view> -->
+           </view>
+            <!-- <view class="tsc">
+              <view class="tsc_left">2</view>
+              <view class="tsc_main">在对未进行答题的题目进行补答时，所获得的积分减半；</view>
+           </view>
+            <view class="tsc">
+              <view class="tsc_left">3</view>
+              <view class="tsc_main">题目共计28道，每天1道题，未到答题日期的题目不能进行答题。</view>
+           </view> -->
+       </view>
+       <view class="ts_but">我知道了</view>
+   </view>
+</view>
+
+<view class="tishi_box" wx:if="{{tishi_lear==true}}">
+    <view class="lear_tishi_box">
+          <view class="lear_tu"><image src="../../static/images/images/lear_tankuang_03.png"></image></view>
+          <scroll-view  class="lear_tishi" scroll-y>
+          <view class="l_tishi">
+          <text space="emsp">  {{study_content}}</text>
+          </view>
+          </scroll-view>
+          <view wx:if="{{is_show!=2}}" class="close" bindtap='hide_lear'><image src="../../static/images/images/13close_03.png"></image></view>
+           <view wx:if="{{is_show!=2&&is_tested==0}}" class="ts_but ts_but1" bindtap='to_quest'>去答题</view>
+          <view wx:if="{{is_show==2&&is_tested==0}}"  class="ts_but ts_but1" bindtap='to_lear'>我知道了</view>
+
+
+      </view>
+
+</view>
+
+
+
+<view class="huiz_box" wx:if="{{huiz_show}}">
+   <image class="hui_img" src="https://www.xindongguoji.com/static/image/images/huizhang.gif"></image>
+   <image class="guanbi" bindtap="hide_huiz" src="../../static/images/images/lear_guanbi.png"></image>
+</view>

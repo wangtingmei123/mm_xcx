@@ -1,0 +1,13 @@
+<!-- <view class="home">
+	<image src="/static/images/bg2.jpg" class="bgcover"></image>
+	<view class="viewsort__Btn" bindtap='toCompanySort'>
+		<image src="/static/images/btn.png" class="btnimg"></image>
+	</view>
+</view> -->
+
+
+<view class="home">
+	<view class="viewsort__Btn" bindtap='toCompanySort'>
+		<image src="/static/images/btn.png" class="btnimg"></image>
+	</view>
+</view>

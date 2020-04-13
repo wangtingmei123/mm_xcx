@@ -1,0 +1,230 @@
+/* pages/questions/questions.wxss */
+
+page{
+  background: #f7f7f7;
+}
+
+
+.questions_box{
+  width:100%;
+  height:auto;
+
+}
+
+.questions{
+  width: 666rpx;
+  height:394rpx;
+  margin:auto;
+  margin-top:40rpx;
+  border-radius: 22rpx;
+  position: relative;
+    box-shadow: 0rpx 8rpx 20rpx 0rpx #b5d9d5;
+
+
+}
+
+.questions>image{
+  display: block;
+  width:100%;
+  height:100%;
+    border-radius: 18rpx;
+}
+
+.requert{
+  position: absolute;
+  width:555rpx;
+  height:auto;
+  font-size: 34rpx;
+  line-height:60rpx;
+  top:0;left:0;right:0;bottom:0;margin:auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.quer_box{
+  display: block;
+  width:610rpx;
+  height:256rpx;
+  margin:auto;
+  font-size: 28rpx;
+  margin-top:83rpx;
+}
+
+.quer1{
+  width:100%;
+  border:1rpx solid #ccc;
+  border-radius: 86rpx;
+  margin:auto;
+  height:86rpx;
+  line-height: 86rpx;
+  text-align: center;
+  margin-top:75rpx;
+  position: relative;
+}
+
+
+.quer1:first-child{
+  margin-top:0;
+}
+
+.quer1>image{
+  display: block;
+  width:37rpx;
+  height:37rpx;
+  position: absolute;
+  top:0;bottom:0;margin:auto;
+  right:36rpx;
+}
+
+.queding{
+  width:100rpx;
+  height:50rpx;
+  background: #0085d0;
+  color: #fff;
+  margin:auto;
+  margin-top:50rpx;
+  text-align: center;
+  line-height:50rpx;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+
+}
+
+.quer2{
+ border:1rpx solid #ffcd36;
+ color: #ffcd36;
+}
+
+
+.choujiang{
+    width:610rpx;
+  height:88rpx;
+  background: linear-gradient(to right, #15d59c 0%, #1bcbad 50%, #25bfc4 100%);
+  color: #fff;
+  margin:auto;
+  margin-top:90rpx;
+  text-align: center;
+  line-height:88rpx;
+  font-size: 34rpx;
+  border-radius:88rpx;
+  box-shadow: 0rpx 8rpx 20rpx 0rpx #b5d9d5;
+}
+
+
+
+
+.questions_more{
+  width: 100%;
+  height:100vh;
+  background: linear-gradient(to bottom right, #fd9e51 0%, #fe7354 30%, #ff5a57 100%);
+  position: relative;
+
+}
+
+.questions_more>image{
+  display: block;
+  width:100%;
+  height:442rpx;
+  margin:auto;
+}
+
+.dati_box{
+  width:650rpx;
+  height:776rpx;
+  position: absolute;
+  left:0;right:0;margin:auto;
+  top:28vh;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+
+.dati_tit_box{
+    width:100%;
+  height:277rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    padding:14rpx 60rpx 0rpx 60rpx;
+  box-sizing: border-box;
+}
+
+.dati_tit{
+  width:100%;
+  height:auto;
+  font-size: 30rpx;
+  line-height:42rpx;
+
+}
+
+.dati_center{
+  width:100%;
+  height:44rpx;
+
+}
+
+.dati_center>image{
+  display: block;
+  width:100%;
+  height:100%;
+}
+
+.dati_bottom{
+  width: 100%;
+  height:460rpx;
+  background: #fff;
+  overflow: hidden;
+}
+
+.dati_bottom>.daan1{
+   width:510rpx;
+   height:100rpx;
+   margin:auto;
+  margin-top:22rpx;
+  background: #f2f2f5;
+  color: #545454;
+  text-align: center;
+  line-height:38rpx;
+  font-size: 28rpx;
+  border-radius: 100rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left:70rpx;
+  padding-right:70rpx;
+  box-sizing: border-box;
+
+}
+
+.dati_bottom>.daan1:nth-child(2){
+  margin-top:40rpx;
+}
+
+.dati_bottom>.daan1>image{
+  display: block;
+  width:44rpx;
+  height:44rpx;
+  position: absolute;
+  top:0;bottom:0;margin:auto;
+  left:38rpx;
+
+}
+
+.dati_bottom>.daan2{
+  background: linear-gradient(to right, #f9c89b 0%, #fb9e92 50%, #fa758b 100%);
+
+  color: #fff;
+
+}
+
+.dati_bottom>.yes_daan{
+    background: #ff5a57;
+    margin-top:40rpx;
+  color: #fff;
+  font-size: 32rpx;
+
+}

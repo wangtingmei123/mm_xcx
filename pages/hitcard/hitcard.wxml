@@ -1,0 +1,75 @@
+  <map class="map" id="card_map" 
+  latitude="{{latitude}}"
+  longitude="{{longitude}}"
+  markers="{{markers}}"
+  bindregionchange="regionchange"
+  bindmarkertap="markertap"
+  bindcontroltap="controltap"
+  scale="14"
+  show-location
+  >
+
+               <canvas canvas-id="canvas" style="width:{{cWidth}}px;height:{{cHeight}}px;position: absolute;left:-1000px;top:-1000px;"></canvas>   
+
+    <cover-view class="sign">
+      <cover-image src="../../static/images/images/08daka_oo_02.png"></cover-image>
+      <cover-view class="sign__box">
+        <cover-view class="sign__btn"  bindtap='userHitcard'>
+            <cover-view class="word">打卡</cover-view>
+            <!-- <cover-view class="timeout">{{time_counter_txt}}</cover-view> -->
+        </cover-view>
+
+        <cover-view class="note">{{card_message}}</cover-view>
+          
+          <cover-view class="dakad">
+           <cover-image src="../../static/images/images/08daka1_03.png" style='display:block;width:24rpx;height:26rpx;'></cover-image> 
+          <cover-view class="daka_tip">请前往打卡地点</cover-view>
+          <cover-view class="didian"  bindtap='changeToNewLocation'> {{'<'}}{{address_name}}{{'>'}} </cover-view>
+          </cover-view>
+
+      </cover-view>
+    </cover-view>
+
+
+ <cover-view class="suc_daka" bindtap='close_suc' wx:if="{{suc_daka}}">
+
+    <cover-view class="suc_box">
+        <cover-view class="suc_boxa">
+              <cover-image src="../../static/images/images/08daka_t_03.png" style='width:100%;height:550rpx;' ></cover-image>
+      </cover-view>
+ <cover-view class="close" ><cover-image style='width:50rpx;height:50rpx;margin:auto;' src="../../static/images/images/13close_03.png"></cover-image></cover-view>   </cover-view>
+
+  </cover-view>
+
+
+
+   <cover-view class='torefund_box2' wx:if="{{is_choos}}">
+            <cover-view class='tfright2' >
+                  <cover-view class="tfrboxsc"  wx:for="{{tempFilePaths}}" data-index="index"  wx:key="index" >
+                       <cover-image class="tfrboxscimg" src="{{item}}" data-info="{{item}}"  style='width:100%;height:auto' catchtap="ylimg"></cover-image>
+                       <cover-image  class="del_img" bindtap='del_img'  src="../../static/images/images/del_write.png" data-index="{{index}}"  style='width:50rpx;height:50rpx;'></cover-image>
+                  </cover-view>
+                  <cover-view class="tfrboxsc tfrboxsca" wx:if="{{tempFilePaths.length==0}}"   bindtap='chooseimg'>
+                        <cover-image class="jia" src="../../static/images/images/paizhao.png" style="width:90rpx;height:90rpx"
+></cover-image>
+                  </cover-view>
+
+                  
+                <cover-view class='submit' bindtap='submit'>提交</cover-view>
+                <cover-view class='totijiao'>请提交照片完成打卡</cover-view>
+                  
+            </cover-view>
+      </cover-view>
+
+
+
+
+  </map>
+
+
+ 
+
+
+
+
+

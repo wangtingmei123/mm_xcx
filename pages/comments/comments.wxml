@@ -1,0 +1,12 @@
+<!--pages/comments/comments.wxml-->
+<!--pages/tribal/tribal.wxml-->     
+<view class="write_box">
+ <textarea class="textarea" auto-focus show-confirm-bar="{{confirm_bar}}"  bindinput="textarea_num"  maxlength='100'  placeholder='快来发表您的看法吧！'></textarea>
+ <view class="area_tip"><text style='color:{{color}}'> {{font_num}} </text>/ 100</view>
+ 
+</view>
+
+<!-- 图片预览 -->
+
+      <view class='submit' bindtap='submit'>发表</view>
+

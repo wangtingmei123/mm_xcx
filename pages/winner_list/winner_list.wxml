@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="wrapper">
+	<view class="banner">
+		<image class="img" src="../../static/images/images/12zhongj_02.png"></image>
+		<view class="info">
+			<view class="tit">{{activity_name}}</view>
+			<view class="verson">第{{prizearr[0].name}}期 {{prize_start_time}}</view>
+      <!-- <view class="tit">未抽完名额将累计到下一期 </view> -->
+		</view>
+</view>
+    <scroll-view class="scroll_qishu" scroll-x>
+      <view wx:for="{{prizearr}}" wx:key="index" class="qishu {{qishu==item.id?'qi_color':''}}" data-info="{{item.id}}" bindtap='to_qi' >第{{item.name}}期
+          <view class="qi_flex" wx:if="{{qishu==item.id}}"></view>
+      </view>
+ 
+    </scroll-view>
+
+	
+</view>
+
+ 
+	<scroll-view class="namelist"
+    scroll-y="true"
+    lower-threshold="50"
+    bindscrolltolower="getRankingList">
+		<!-- <view class="item" wx:for="{{winner_list}}" wx:for-index="idx" wx:key="key" wx:for-item="winner_info">
+    <view class="num">{{idx+1}}</view>
+			<view class="depart">{{winner_info.department_name}}</view>
+			<view class="name">{{winner_info.real_name}}</view>
+		</view> -->
+
+    <view class="item" wx:for="{{info}}" wx:key="index">
+          <view class="num">{{index+1}}</view>
+          <view class="name">{{item.real_name}}</view>
+          <view class="depart">{{item.department_name}}</view>
+		</view>
+    
+    
+
+	</scroll-view>

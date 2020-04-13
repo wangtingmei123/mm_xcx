@@ -1,0 +1,317 @@
+<!--index.wxml-->
+
+
+
+
+<view class="rank_box">
+   <view class="fiex_data">
+
+     <view class="rank_top">
+
+          <image src="https://www.xindongguoji.com/static/image/images/06rank_bg_03.png"></image>
+        
+          <view class='progress_box'>
+
+                  <view class="gif_img"><image src="https://www.xindongguoji.com/static/image/images/06rank.gif"></image></view>
+                  <view class="zhezha">
+                        <view class="canvasbg"></view>
+                       <!-- <canvas class="canvas1" canvas-id="canvasArc" style="width:{{width_c}}px;height:{{height_c}}px;"></canvas>
+                       <canvas class="canvas"  canvas-id="canvasProgressbg" style="width:{{width_c}}px;height:{{height_c}}px;"></canvas> -->
+
+                         <view class="bushu1"><text>{{user_info.user_step_num_count}}</text></view>
+                         <view class="bushu2">累计步数</view>
+                  </view>
+                  
+            </view>
+
+
+             <view class="rankt_tip">
+                <view class="ranktt1 ranktt11">
+                  <image src="../../static/images/images/06pai_06.png" style='width:45rpx;height:44rpx;margin-top:2rpx;'></image>
+                  <view class="ktt_word">第{{user_info.user_ranking_num}}名</view>
+                </view>
+                <view class="ranktt1 ranktt12" bindtap='show_da' wx:if="{{rank.standard==1}}">
+                    <image src="../../static/images/images/06pai_03.png" style='width:50rpx;height:48rpx;'></image>
+                    <view class="ktt_word">您已达标</view>
+              </view>
+               <view class="ranktt1 ranktt13" bindtap='to_data' wx:if="{{rili_show}}">
+                 <image src="../../static/images/images/06pai_09.png" style='width:43rpx;height:41rpx;margin-top:3rpx'></image>
+                 <view class="ktt_word">运动日历</view>
+              </view>
+          </view>
+        </view>
+
+      <view class="big_box">
+      
+        <view class="tabtitFixed">
+                <view wx:for="{{rank_ty}}" wx:key="key"  class="tabtit {{totap==item.id?'tabtit1':''}}"   bindtap='totap_ranklist' data-info="{{item}}">
+                      {{item.name}}
+                      <view class="select_btn" wx:if="{{totap==item.id}}"></view>
+                </view>
+         
+          </view>
+
+          <view class="rank_list" wx:if="{{totap==1&&tapname=='个人排名'}}"><text>*</text>个人排名统计所有参与人员总步数</view>
+          <view class="rank_list" wx:if="{{totap==2&&tapname=='步数排名'}}"><text>*</text>步数排名统计参与部门间所有参与人员人均步数排名</view>
+          <view class="rank_list" wx:if="{{totap==2&&tapname=='工会小组排名'}}"><text>*</text>工会小组排名统计参与部门间所有参与人员人均步数排名</view>
+
+          <view class="rank_list" wx:if="{{totap==2&&tapname=='部门排名'}}"><text>*</text>部门排名统计参与部门间所有参与人员人均步数排名</view>
+          <view class="rank_list" wx:if="{{totap==3&&tapname=='部内排名'}}"><text>*</text>部内排名统计部门内所有参与人员总步数排名</view>
+
+           <view class="rank_list" wx:if="{{totap==2&&tapname=='单位排名'}}"><text>*</text>单位排名统计参与单位间所有参与人员人均步数排名</view>
+          <view class="rank_list" wx:if="{{totap==3&&tapname=='单位内排名'}}"><text>*</text>单位内排名统计单位内所有参与人员总步数排名</view>
+          <view class="rank_list" wx:if="{{totap==4}}"><text>*</text>积分排名统计单位活动期间获得的人均积分排名情况</view>
+          <view class="rank_list" wx:if="{{totap==5&&canyul==false&&(activity_id==ghact_id||activity_id==ghactcs_id)}}"><text>*</text>参与率排名统计达标人数与总人数的余数的排名情况</view>
+          <view class="rank_list rank_lista" wx:if="{{totap==5&&canyul==true}}"><text>*</text>参与率排名为工会小组实际参与人数除以工会小组员工总人数</view>
+           <view class="rank_list rank_lista" wx:if="{{totap==5&&canyul==false&&activity_id!=ghact_id&&activity_id!=ghactcs_id}}"><text>*</text>参与率排名统计参与活动的员工排名情况</view>
+
+
+
+       </view>
+      
+
+
+<!-- 个人成绩情况 开始-->
+
+
+      <!-- <view class='tabcont_title'>
+
+             <view class="tabcont_item tabcont_itemb" wx:if="{{ranking_type == 1}}">
+                  
+                 <view class="cont_item_left">
+                      <text class="item_num" >{{user_infos.user_ranking_num}}</text>
+                       <image class="photo_img" src="{{user_info.avatar}}" wx:if="{{user_infos.avatar!=''}}"></image>
+                      <image  class="photo_img" src="../../static/images/images/user.png" wx:if="{{user_infos.avatar==''}}"></image>
+                      <view class="name_box">
+                          <view class="name">{{user_infos.real_name}}啊啊啊</view>
+                          <view class="bumen">{{user_infos.department_name}}不不不</view>
+                      </view>
+                 </view>
+                 <view  class="cont_item_right">{{user_infos.step_num_count}}12365448 <text>步</text></view>
+            </view>
+
+
+            <view class="tabcont_item tabcont_itemb" wx:if="{{ranking_type == 2}}">
+                  
+                 <view class="cont_item_left">
+                  
+                      <text class="item_num" >{{user_infos.user_ranking_num}}</text>
+                      <text class="name name_bumen">{{user_infos.department_name}}</text>
+                 </view>
+                 <view  class="cont_item_right">{{user_infos.average_step_num}} <text>步</text></view>
+            </view>
+
+
+            <view class="tabcont_item tabcont_itemb" wx:if="{{ranking_type == 3}}">
+
+                  <view class="cont_item_left">
+                        
+                            <text class="item_num" >{{user_infos.user_ranking_num}}</text>
+                            <image class="photo_img"src="{{user_infos.avatar}}" wx:if="{{user_infos.avatar!==''}}"></image>
+                            <image  class="photo_img" src="../../static/images/images/user.png" wx:if="{{user_infos.avatar==''}}"></image>
+
+                            <view class="name_box">
+                                <view class="name">{{user_infos.real_name}}</view>
+                                <view class="bumen">{{user_infos.department_name}}</view>
+                            </view>              
+                   </view>
+                 <view  class="cont_item_right">{{user_infos.step_num_count}} <text>步</text></view>
+            </view>
+
+
+            <view class="tabcont_item tabcont_itemb" wx:if="{{ranking_type == 4}}">
+                  
+                 <view class="cont_item_left">
+                    
+                      <text class="item_num">{{user_infos.user_ranking_num}}</text>
+                      
+                      <text class="name name_bumen">{{user_infos.department_name}}</text>
+                 </view>
+                 <view  class="cont_item_right">{{user_infos.avgintegral}} <text></text></view>
+            </view>
+
+
+            <view class="tabcont_item tabcont_itemb" wx:if="{{ranking_type == 5}}">
+                  
+                 <view class="cont_item_left">
+                      
+                      <text class="item_num">{{user_infos.user_ranking_num}}</text>
+                    
+
+                      <text class="name name_bumen">{{user_infos.department_name}}</text>
+                 </view>
+                 <view  class="cont_item_right">{{user_infos.attend_percent}} <text>%</text></view>
+            </view>
+
+      </view> -->
+
+<!-- 个人成绩情况 结束-->
+
+   </view>
+
+
+
+
+
+
+   <!-- 个人排名  -->
+        <scroll-view class="tabcont tabcont__member" wx:if="{{ranking_type == 1}}" 
+            scroll-y="true"
+            lower-threshold="50"
+            bindscrolltolower="getRankingList" 
+            bindtouchmove="move" bindtouchend="end">
+
+            <view class="tabcont_item" wx:for="{{ranking_list}}" wx:for-index="idx" wx:key="key" wx:for-item="user_info">
+                  
+                 <view class="cont_item_left">
+                      <image class="num_img" wx:if="{{idx+1==1}}"  src="../../static/images/images/06pai_15.png"></image>
+                      <image class="num_img" wx:if="{{idx+1==2}}"  src="../../static/images/images/06pai_26.png"></image>
+                      <image class="num_img" wx:if="{{idx+1==3}}"  src="../../static/images/images/06pai_31.png"></image>
+
+                      <text class="item_num" wx:if="{{idx+1>3}}">{{idx+1}}</text>
+                       <image class="photo_img" src="{{user_info.avatar}}" wx:if="{{user_info.avatar!=''}}"></image>
+                      <image  class="photo_img" src="../../static/images/images/user.png" wx:if="{{user_info.avatar==''}}"></image>
+                      <view class="name_box">
+                          <view class="name">{{user_info.real_name}}</view>
+                          <view class="bumen">{{user_info.department_name}}</view>
+                      </view>
+                      <!-- <text class="name">{{user_info.real_name}}</text> -->
+                 </view>
+                 <view  class="cont_item_right">{{user_info.step_num_count}} <text>步</text></view>
+            </view>
+
+          </scroll-view>
+
+
+<!-- 部门、单位排名-->
+          <scroll-view class="tabcont tabcont__member" wx:if="{{ranking_type == 2}}" 
+            scroll-y="true"
+            lower-threshold="50"
+            bindscrolltolower="getRankingList" >
+
+            <view class="tabcont_item" wx:for="{{ranking_list}}" wx:for-index="idx" wx:key="key" wx:for-item="user_info">
+                  
+                 <view class="cont_item_left">
+                      <image class="num_img" wx:if="{{idx==0}}"  src="../../static/images/images/06pai_15.png"></image>
+                      <image class="num_img" wx:if="{{idx==1}}"  src="../../static/images/images/06pai_26.png"></image>
+                      <image class="num_img" wx:if="{{idx==2}}"  src="../../static/images/images/06pai_31.png"></image>
+
+                      <text class="item_num" wx:if="{{idx>2}}">{{idx+1}}</text>
+                      <!-- <image class="photo_img"src="{{user_info.avatar}}" wx:if="{{user_info.avatar}}"></image>
+                      <image  class="photo_img" src="/static/images/photo.png" wx:if="{{!user_info.avatar}}"></image> -->
+
+                      <text class="name name_bumen">{{user_info.department_name}}</text>
+                 </view>
+                 <view  class="cont_item_right">{{user_info.average_step_num}} <text>步</text></view>
+            </view>
+
+          </scroll-view>
+
+
+<!-- 部内、单位内排名-->
+       <scroll-view class="tabcont tabcont__member" wx:if="{{ranking_type == 3}}" 
+            scroll-y="true"
+            lower-threshold="50"
+            bindscrolltolower="getRankingList" >
+
+            <view class="tabcont_item" wx:for="{{ranking_list}}" wx:for-index="idx" wx:key="key" wx:for-item="user_info">
+                  
+                 <view class="cont_item_left">
+                      <image class="num_img" wx:if="{{idx+1==1}}"  src="../../static/images/images/06pai_15.png"></image>
+                      <image class="num_img" wx:if="{{idx+1==2}}"  src="../../static/images/images/06pai_26.png"></image>
+                      <image class="num_img" wx:if="{{idx+1==3}}"  src="../../static/images/images/06pai_31.png"></image>
+
+                      <text class="item_num" wx:if="{{idx+1>3}}">{{idx+1}}</text>
+                      <image class="photo_img"src="{{user_info.avatar}}" wx:if="{{user_info.avatar!==''}}"></image>
+                      <image  class="photo_img" src="../../static/images/images/user.png" wx:if="{{user_info.avatar==''}}"></image>
+
+                       <view class="name_box">
+                          <view class="name">{{user_info.real_name}}</view>
+                          <view class="bumen">{{user_info.department_name}}</view>
+                      </view>              
+                   </view>
+                 <view  class="cont_item_right">{{user_info.step_num_count}} <text>步</text></view>
+            </view>
+
+          </scroll-view>
+         
+
+<!-- 积分排名-->
+          <scroll-view class="tabcont tabcont__member" wx:if="{{ranking_type == 4}}" 
+            scroll-y="true"
+            lower-threshold="50"
+            bindscrolltolower="getRankingList" >
+
+            <view class="tabcont_item" wx:for="{{ranking_list}}" wx:for-index="idx" wx:key="key" wx:for-item="user_info">
+                  
+                 <view class="cont_item_left">
+                      <image class="num_img" wx:if="{{idx==0}}"  src="../../static/images/images/06pai_15.png"></image>
+                      <image class="num_img" wx:if="{{idx==1}}"  src="../../static/images/images/06pai_26.png"></image>
+                      <image class="num_img" wx:if="{{idx==2}}"  src="../../static/images/images/06pai_31.png"></image>
+
+                      <text class="item_num" wx:if="{{idx>2}}">{{idx+1}}</text>
+                      <!-- <image class="photo_img"src="{{user_info.avatar}}" wx:if="{{user_info.avatar}}"></image>
+                      <image  class="photo_img" src="/static/images/photo.png" wx:if="{{!user_info.avatar}}"></image> -->
+
+                      <text class="name name_bumen">{{user_info.department_name}}</text>
+                 </view>
+                 <view  class="cont_item_right">{{user_info.avgintegral}} <text></text></view>
+            </view>
+
+          </scroll-view>
+
+
+
+<!-- 部门参与率排行榜 -->
+         <scroll-view class="tabcont tabcont__member" wx:if="{{ranking_type == 5}}" 
+            scroll-y="true"
+            lower-threshold="50"
+            bindscrolltolower="getRankingList" >
+
+
+            <view class="tabcont_item" wx:for="{{ranking_list}}" wx:for-index="idx" wx:key="key" wx:for-item="user_info">
+                  
+                 <view class="cont_item_left">
+                       <image class="num_img" wx:if="{{idx+1==1}}"  src="../../static/images/images/06pai_15.png"></image>
+                      <image class="num_img" wx:if="{{idx+1==2}}"  src="../../static/images/images/06pai_26.png"></image>
+                      <image class="num_img" wx:if="{{idx+1==3}}"  src="../../static/images/images/06pai_31.png"></image>
+
+                      <text class="item_num" wx:if="{{idx+1>3}}">{{idx+1}}</text>
+                      <!-- <image class="photo_img"src="{{user_info.avatar}}" wx:if="{{user_info.avatar}}"></image>
+                      <image  class="photo_img" src="/static/images/photo.png" wx:if="{{!user_info.avatar}}"></image> -->
+
+                      <text class="name name_bumen">{{user_info.department_name}}</text>
+                 </view>
+                 <view  class="cont_item_right">{{user_info.attend_percent}} <text>%</text></view>
+            </view>
+
+
+          </scroll-view>
+
+
+</view>
+
+
+
+<cover-view class="dabiaok_box" wx:if="{{da_show&&rank.standard==1}}" bindtap='hide_da'>
+   <cover-view  class="dabiaok">
+        <cover-view class="dabiao_tit">恭喜您</cover-view>
+        <cover-view class="dabiao_img"><cover-image src="../../static/images/images/06active_k_03.png"></cover-image></cover-view>
+        <cover-view class="dabiao_tip">您已完成本次活动！</cover-view>
+        <cover-view class="dabiao_info">
+            <cover-view style='line-height:48rpx;'> 累计步数{{user_info.user_step_num_count}}，累计里程数289千米</cover-view>
+            <cover-view style='line-height:48rpx;'>累计消耗12895卡路里</cover-view>  
+        </cover-view>
+        <cover-view class="dabiao_but" >我知道了</cover-view>
+    </cover-view>
+</cover-view>
+
+
+
+
+
+
+
+
+
+

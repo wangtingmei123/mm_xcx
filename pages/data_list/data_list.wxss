@@ -1,0 +1,324 @@
+/* pages/data_list/data_list.wxss */
+
+page{
+  background: #f7f7f7;
+}
+
+
+/* .box1{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+} */
+
+
+
+.yue_title{
+  width:100%;
+  height:98rpx;
+  background: #f7f7f7;
+    
+
+}
+
+.yue_box{
+  width:378rpx;
+  height:100%;
+  margin:auto;
+ overflow: hidden;
+  position: relative;
+
+
+}
+
+.yue_t{
+  width:120rpx;
+  height:100%;
+  line-height:98rpx;
+  text-align: center;
+  position: absolute;
+  left:0;right:0;
+  top:0;bottom:0;
+  margin:auto;
+    color: #ff5a57;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+
+.yue_img{
+  width:37rpx;
+  height:100%;
+  float: left;
+
+
+}
+
+.yue_img1{
+  float: right;
+}
+
+.yue_img>image{
+  display: block;
+    width:29rpx;
+  height:30rpx;
+  margin:auto;
+  margin-top:34rpx;
+}
+
+
+.week_box{
+  display: block;
+  height:88rpx;
+  overflow: hidden;
+    background: #fff;
+}
+.week_box>.week_tip{
+  height:88rpx;
+  font-size: 28rpx;
+  line-height:88rpx;
+  float: left;
+  text-align: center;
+  
+}
+
+.fenge{
+ /* margin-top:88rpx; */
+ width:680rpx;
+ height:1rpx;
+ background: #e6e6e6;
+ margin:auto;
+
+}
+
+.riqi_box{
+  width:100%;
+  height:auto;
+  padding-bottom:20rpx;
+    background: #fff;
+    overflow: hidden;
+}
+
+.riqi{
+  height:70rpx;
+    float: left;
+    font-size: 28rpx;
+    line-height:70rpx;
+    text-align: center;
+    position: relative;
+
+  
+}
+
+.dateOn{
+  width:60rpx;
+  height:60rpx;
+
+  /* box-sizing: border-box; */
+  border-radius: 60rpx;
+  background-color: #ff5a57;
+  position: absolute;
+  top:0;
+  bottom:0;left:0;right:0;margin:auto;
+  color: #fff;
+  line-height:60rpx;
+}
+
+.dabiao{
+  width:30rpx;
+  height:25rpx;
+  position: absolute;
+  top:50rpx;
+  left:60rpx;
+
+}
+
+.dabiao>image{
+  display: block;
+  width:100%;
+  height:100%;
+}
+
+
+.zhezhao{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 999;
+}
+
+
+.me_pai{
+ width:710rpx;
+ height:98rpx;
+ display: flex;
+ justify-content: space-between;
+
+   background: #fff;
+   margin:auto;
+    margin-top:12rpx;
+}
+
+.pai_left{
+  width:auto;
+  height:100%;
+  line-height:98rpx;
+  margin-left:42rpx;
+}
+
+.pai_left>image{
+  width:68rpx;
+  height:68rpx;
+  vertical-align: middle;
+  border-radius: 68rpx;
+  background: #eee;
+}
+
+.pai_left>text{
+  font-size: 28rpx;
+  margin-left:16rpx;
+}
+
+.pai_right{
+    width:auto;
+  height:100%;
+  line-height:98rpx;
+  margin-right:32rpx;
+  font-size: 28rpx;
+}
+
+
+.flex{
+  width:100%;
+  height:auto;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 999;
+  background: #f7f7f7;
+
+}
+
+
+
+.tabcont{
+  width:710rpx;
+  height:auto;
+  margin:auto;
+  margin-top:670rpx;
+  background: #fff;
+
+}
+
+
+.tabcont_member{
+    margin-top:741rpx;
+}
+.tabcont_item{
+  width:680rpx;
+  height:132rpx;
+  margin:auto;
+  border-bottom:1rpx solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+    line-height:132rpx;
+    font-size: 28rpx;
+}
+
+.tabcont_item:last-child{
+  border:none;
+}
+
+
+.cont_item_left{
+  width: 450rpx;
+  height:100%;
+display: flex;
+align-items: center;  
+  overflow: hidden;
+  
+}
+
+.cont_item_left>.num_img{
+  display: block;
+  width:28rpx;
+  height:41rpx;
+
+
+
+}
+
+.cont_item_left>.photo_img{
+  display: block;
+  width:68rpx;
+  height:68rpx;
+  border-radius: 68rpx;
+    margin-left:20rpx;
+    background: #eee;
+  
+}
+
+.name_box{
+  width:300rpx;
+  height:100%;
+       margin-left:20rpx;
+
+}
+
+.name_box>.name{
+    display: block;
+   width:auto;
+   font-size: 30rpx;
+   margin-top:38rpx;
+   height:30rpx;
+   line-height:30rpx;
+ 
+}
+
+.name_box>.bumen{
+    display: block;
+   width:auto;
+   font-size: 22rpx;
+   margin-top:6rpx;
+   height:auto;
+   line-height:26rpx;
+   color: #999;
+
+ 
+}
+
+.cont_item_left>.name_bumen{
+     width: 400rpx;
+}
+
+
+.cont_item_left>.item_num{
+  display: block;
+  font-size: 28rpx;
+  color: #545454;
+  margin-left:10rpx;
+}
+
+
+
+
+.cont_item_right{
+  width:auto;
+  height:100%;
+  font-size: 50rpx;
+  margin-right:20rpx;
+  color: #ff5a57;
+      font-family: 'DINCondensedC';
+      line-height: 132rpx;
+
+}
+
+.cont_item_right>text{
+  font-size: 24rpx;
+  color: #808080;
+}
+
+

@@ -1,0 +1,115 @@
+<!--pages/tribe_detil/tribe_detil.wxml-->
+<!--pages/sports_tribe/sports_tribe.wxml-->
+<view class="detil_box">
+<view class="sports_box" >
+
+    <view class="orgin_title">来自-{{comm_all.activity_name}}</view>
+
+   <view class="sports_title" wx:if="{{tap_show=='all'}}">
+        <view class="spo_tit_left">
+             <view class="tit_photo">
+                  <image wx:if="{{comm_all.head_img!=''}}"  src="{{comm_all.head_img}}"></image>
+                  <image wx:if="{{comm_all.head_img==''}}"  src="../../static/images/images/user.png"></image>
+             </view>
+             <view class="tit_info">
+                  <view class="tit_name">{{comm_all.real_name}}</view>
+                  <view class="tit_bumen"><image src="../../static/images/images/22buluo_03.png"></image> <text>{{comm_all.department_name}}</text></view>
+             </view>
+        </view>
+        <view class="spo_tit_right">{{comm_all.add_time}}</view>
+    </view>
+
+
+    <view class="sports_title" wx:if="{{tap_show=='me'}}">
+        <view class="spo_tit_left" >
+             <view class="tit_photo">                 
+                 <image wx:if="{{comm_all.head_img!=''}}"  src="{{comm_all.head_img}}"></image>
+                  <image wx:if="{{comm_all.head_img==''}}"  src="../../static/images/images/user.png"></image></view>
+             <view class="tit_info">
+                  <view class="tit_name">我</view>
+                  <view class="tit_bumen"><image src="../../static/images/images/22buluo_03.png"></image> <text>{{comm_all.department_name}}</text></view>
+                  
+             </view>
+             <view class="tit_time">{{comm_all.add_time}}</view>
+        </view>
+        <view class="spo_tit_right spo_tit_del" bindtap='to_del'>删除</view>
+    </view>
+
+
+
+    <view class="sports_con" >{{comm_all.content}}</view> 
+
+    <view class="sports_img">
+          <view class="item_img" data-info="{{comm_all.img}}" data-index="{{index}}"  wx:for="{{comm_all.img}}" wx:key="index"  bindtap='ylimg'  >
+              <image src="{{item}}" wx:if="{{item!=''}}"  mode="aspectFill"></image>
+          </view>
+    
+
+    </view>
+
+    
+    <view class="sports_like">
+         <view class="spo_like" data-info="{{comm_all.article_id}}">
+              <text> {{comm_all.praise_nums}} 人赞了</text>
+         </view>
+    </view>
+
+    <view class="link_list" wx:if="{{comm_all.praise_headimg.length>0}}">
+        <view class="image"  wx:for="{{comm_all.praise_headimg}}" wx:key="index">
+            <image wx:if="{{item.head_img!=''}}"  src="{{item.head_img}}" ></image>
+            <image wx:if="{{item.head_img==''}}"  src="../../static/images/images/user.png" ></image>
+
+      </view>
+
+        <image bindtap='like_list' class="mores" src="../../static/images/images/23mores_03.jpg"></image>
+        
+    </view>
+
+  </view>
+
+<!-- 带回复 -->
+    <view class="comm_box" wx:if="{{comm_all.circle_is_reply==1&&comm_all.reply.length>0}}">
+    
+      <view class="comm_item" wx:for="{{comm_all.reply}}" wx:key="index">
+        <view class="sports_title  sports_title1" >
+            <view class="spo_tit_left spo_tit_left1">
+                <view class="tit_photo tit_photo1">
+                        <image  wx:if="{{item.head_img!=''}}" src="{{item.head_img}}" ></image>
+                         <image  wx:if="{{item.head_img==''}}"  src="../../static/images/images/user.png" ></image>
+                </view>
+                <view class="tit_info tit_info1">
+                      <view class="tit_center">
+                            <view class="tit_name" >{{item.real_name}}</view>
+                            <view class="tit_bumen"><text class="comm_bumen">{{item.department_name}}</text></view>
+                            <view class="spo_tit_right spo_tit_right1">{{item.add_time}}</view>
+                      </view>
+                      <view class="pin_con">{{item.content}}</view>
+                </view>
+            </view>
+        </view>
+        </view>
+
+    </view>
+
+</view>
+
+    <view class="comm_btn" wx:if="{{tap_show=='all'&&comm_all.circle_is_reply==1&&comm_all.is_me==0}}">
+         <view class="comm_like" bindtap='to_likea' data-info="{{comm_all.praise_status}}" >
+            <image src="../../static/images/images/23_bulun_03_03.png" wx:if="{{comm_all.praise_status==1}}"></image>
+            <image src="../../static/images/images/22buluo_select_17.png" wx:if="{{comm_all.praise_status==2}}"></image>
+            <text class="{{comm_all.praise_status==2?'zan_select':''}}">{{comm_all.praise_nums}}</text>
+         </view>
+         <view class="comm_pin" bindtap='to_pin' data-id="{{comm_all.article_id}}"><image src="../../static/images/images/23_bulun_05.png"></image><text>{{comm_all.reply_nums}}</text>
+         </view>
+    </view>
+
+
+
+<!-- 不带回复 -->
+
+<view wx:if="{{tap_show=='all'&&comm_all.circle_is_reply!=1&&comm_all.is_me==0}}">
+      <view class="choujiang" bindtap='to_likea' data-info="{{comm_all.praise_status}}" wx:if="{{comm_all.praise_status==1}}">点赞</view>
+       <view class="choujiang" bindtap='to_likea' data-info="{{comm_all.praise_status}}"  wx:if="{{comm_all.praise_status==2}}">取消点赞</view>
+</view>
+      
+

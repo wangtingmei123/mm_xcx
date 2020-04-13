@@ -1,0 +1,39 @@
+  <map class="map" id="card_map" show-compass="true" show-compass="true" 
+  latitude="{{latitude}}"
+  longitude="{{longitude}}"
+  markers="{{markers}}"
+  bindregionchange="regionchange"
+  bindmarkertap="markertap"
+  bindcontroltap="controltap"
+  scale="14"
+  >
+    <cover-view class="sign">
+      <cover-image src="../../static/images/images/08daka_oo_02.png"></cover-image>
+      <cover-view class="sign__box">
+        <cover-view class="sign__btn"  bindtap='userHitcard'>
+            <cover-view class="word">打卡</cover-view>
+            <!-- <cover-view class="timeout">{{time_counter_txt}}</cover-view> -->
+        </cover-view>
+
+        <cover-view class="note">{{card_message}}</cover-view>
+          
+          <cover-view class="dakad">
+           <cover-image src="../../static/images/images/08daka1_03.png" style='display:block;width:24rpx;height:26rpx;'></cover-image> 
+          <cover-view class="daka_tip">请前往打卡地点</cover-view>
+          <cover-view class="didian"  bindtap='changeToNewLocation'> {{'<'}}{{current_address_info.address_name}}{{'>'}} </cover-view>
+          </cover-view>
+
+      </cover-view>
+    </cover-view>
+  </map>
+
+
+  <cover-view class="suc_daka" bindtap='close_suc' wx:if="{{suc_daka}}">
+
+    <cover-view class="suc_box">
+        <cover-view class="suc_boxa">
+              <cover-image src="../../static/images/images/08daka_t_03.png" style='width:100%;height:550rpx;' ></cover-image>
+      </cover-view>
+ <cover-view class="close" ><cover-image style='width:50rpx;height:50rpx;margin:auto;' src="../../static/images/images/13close_03.png"></cover-image></cover-view>   </cover-view>
+
+  </cover-view>

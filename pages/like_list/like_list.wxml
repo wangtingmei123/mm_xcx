@@ -1,0 +1,20 @@
+<!--pages/like_list/like_list.wxml-->
+<view class="like_box">
+
+  
+      <view class="sports_title" wx:for="{{like_list}}" wx:key="index">
+          <view class="spo_tit_left">
+              <view class="tit_photo">
+                <image src="{{item.head_img}}" wx:if="{{item.head_img!=''}}"></image>
+                <image src="../../static/images/images/user.png" wx:if="{{item.head_img==''}}"></image>
+              </view>
+              <view class="tit_info">
+                   {{item.real_name}}
+              </view>
+              <view class="tit_bumen"> <text>{{item.department_name}}</text></view>
+
+          </view>
+          <view class="spo_tit_right">{{item.add_time}}</view>
+      </view>
+
+  </view>

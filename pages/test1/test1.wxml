@@ -1,0 +1,6 @@
+ 
+ <view class="yzm">
+ <input class="yzm_input" bindinput='input_yzm'></input>
+ <canvas class='canvas' style="width:{{code_w}}px;height:{{code_h}}px;" canvas-id="canvas" bindtap='onReady'></canvas>
+ <view wx:if="{{show_tip}}">验证码不正确</view>
+</view>

@@ -1,0 +1,127 @@
+/* pages/userinfo/userinfo.wxss */
+.container {
+  padding: 0;
+  width: 100%;
+}
+
+
+.login_logo{
+  width:612rpx;
+  height:478rpx;
+  margin:auto;
+  border-bottom:1rpx solid #e4e4e4;
+}
+
+.login_logo>image{
+  display: block;
+  width:200rpx;
+  height:200rpx;
+  margin:auto;
+  margin-top:120rpx;
+}
+
+.logo_tip{
+  width:100%;
+  height:32rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height:32rpx;
+  margin-top:46rpx;
+}
+
+
+.login-box{
+  width:588rpx;
+  height:auto;
+  font-size: 32rpx;
+  margin:auto;
+
+}
+
+.get_tip{
+  width:100%;
+  height:auto;
+  margin-top:62rpx;
+}
+
+.get_tip_info{
+  width:100%;
+  height:26rpx;
+  font-size: 22rpx;
+  color: #b4b4b4;
+  margin-top:50rpx;
+  line-height:22rpx;
+  
+
+}
+
+.get_tip_info>.radio{
+  width:22rpx;
+  height:22rpx;
+  float: left;
+  border: 2rpx solid #b4b4b4;
+  border-radius: 22rpx;
+   margin-left:10rpx;
+   position: relative;
+
+}
+
+.get_tip_info>.radioa{
+  background: linear-gradient(to right, #fdb34f 0%, #fe8154 50%, #ff5a57 100%);
+    border: 2rpx solid #ff5a57;
+    /* box-shadow: 0rpx 0rpx 10rpx 0rpx #f8e1c4; */
+    /* box-shadow:inset 0rpx 0rpx 20rpx 0rpx #1bcbad; */
+
+
+
+}
+
+.radio1{
+  width:12rpx;
+  height:12rpx;
+  position: absolute;
+  top:0;bottom:0;left:0;right:0;
+  margin:auto;
+  background: #b4b4b4;
+    border-radius: 12rpx;
+}
+
+
+.get_tip_info>text{
+  display: block;
+  float: left;
+ margin-left:10rpx;
+   line-height:26rpx;
+}
+
+
+
+
+.login1{
+   width:610rpx;
+  height:88rpx;
+  background: linear-gradient(to right, #fdb34f 0%, #fe8154 50%, #ff5a57 100%);
+  color: #fff;
+  margin:auto;
+  text-align: center;
+  line-height:88rpx;
+  font-size: 32rpx;
+  border-radius:88rpx;
+  box-shadow: 0rpx 8rpx 20rpx 0rpx  #f8e1c4;
+  margin-top:80rpx;
+  
+}
+
+.login2{
+
+  background: #ccc;
+    box-shadow: 0rpx 8rpx 20rpx 0rpx #eee;
+
+
+  
+}
+
+.login1::after{
+  border:none;
+}

@@ -1,0 +1,313 @@
+/**index.wxss**/
+.wrapper{
+	width:100vw;
+	height:100vh;
+	background:rgba(249,249,249,1);
+}
+.map{
+	width:100vw;
+	height:100vh;	
+}
+.sign{
+	position:absolute;
+	top:0;
+  width:100%;
+  height:520rpx;
+  left:0;right:0;
+  margin:auto;
+  z-index: 100;
+
+}
+
+.sign>cover-image{
+   display: block;
+   width:100%;
+   height:100%;
+}
+
+.sign__box{
+ width:100%;
+ height:480rpx;
+ position: absolute;
+ top:0;
+ left:0;
+}
+.sign__btn{
+  width:228rpx;
+  height:228rpx;
+  margin:auto;
+  margin-top:50rpx;
+  background: #ff5a57;
+  border:22rpx solid #f8d0ce;
+  border-radius: 228rpx;
+}
+
+.sign__btn .word{
+	font-size:50rpx;
+	font-family:PingFangSC-Semibold;
+	color:#fff;
+	line-height:228rpx;
+  width:100%;
+  height:100%;
+  text-align: center;
+  font-weight: bold;
+}
+.sign__btn .timeout{
+	font-size:28rpx;
+	font-family:PingFangSC-Semibold;
+	color:#fff;
+	line-height:28rpx;
+  width:100%;
+  height:28rpx;
+  text-align: center;
+  margin-top:26rpx;
+}
+.note{
+	width:100%;
+	height:30rpx;
+	line-height:30rpx;
+	text-align:center;
+	font-size:24rpx;
+	font-family:PingFangSC-Medium;
+	color:#a6a6a6;
+  margin-top:35rpx;
+}
+
+
+.dakad{
+  width:100%;
+  height:42rpx;
+  text-align: center;
+  line-height:42rpx;
+  font-size: 28rpx;
+  margin-top:23rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.dakad>cover-image{
+  width:24rpx;
+  height:26rpx;
+ 
+
+}
+
+.daka_tip{
+  margin-left:14rpx;
+}
+
+.didian{
+  color: #ff5a57;
+  height:42rpx;
+  line-height: 42rpx;
+}
+
+.suc_daka{
+  width:100%;
+  height:100vh;
+  position: fixed;
+  z-index: 99999;
+  top:0;left:0;
+  background: rgba(0,0,0,0.7)
+}
+
+.suc_box{
+  width:549rpx;
+  height:580rpx;
+  position: absolute;
+  top:0;left:0;right:0;bottom:0;margin:auto;
+
+}
+
+
+.suc_boxa{
+    display: block;
+  width:100%;
+  height:550rpx;
+    border-radius: 24rpx;
+}
+.suc_boxa>cover-image{
+  display: block;
+  width:100%;
+  height:550rpx;
+}
+
+
+.close{
+  width:52rpx;
+  height:52rpx;
+  background: #fff;
+  border-radius: 52rpx;
+  border:1px solid #f8f8f8;
+  color: #3a3a3a;
+    font-size: 48rpx;
+    text-align: center;
+    line-height:62rpx;
+    position: absolute;
+    bottom:0rpx;
+    left:0;
+    right:0;
+    margin:auto;
+    z-index: 999;
+}
+
+
+
+
+
+.torefund_box2{
+    width:100%;
+    height:100vh;
+    font-size: 28rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 99999999;
+    background: rgba(0, 0, 0, 0.6)
+
+    }
+
+.tfleft{
+    width:100%;
+  height:28rpx;
+  line-height:28rpx;
+  float: left;
+  font-size: 28rpx;
+  color: #000;
+  font-weight: bold;
+  margin-top:40rpx;
+
+}
+
+.tfleft2{
+      width:100%;
+  height:28rpx;
+  line-height:28rpx;
+  float: left;
+  color: #000;
+  font-weight: bold;
+  margin-top:40rpx;
+    font-size: 28rpx;
+  padding-left:20rpx;
+  padding-right:20rpx;
+  box-sizing: border-box;
+}
+
+.tfright{
+  width:100%;
+  height:auto;
+  
+}
+
+.tfright2{
+    width:450rpx;
+   height:500rpx;
+      position: absolute;
+    top:0;left:0;right:0;bottom:0;
+    margin:auto;
+    background: #fff;
+    border-radius: 20rpx;
+
+}
+
+
+
+.tfrboxsc{
+    width:244rpx;
+  height:244rpx;
+ margin:auto;
+position: absolute;
+left:0;right:0;
+  font-size: 66rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height:244rpx;
+  background: #ededed;
+    border:none;
+    margin-top:60rpx;
+    border-radius: 15rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.del_img{
+  display: block;
+  width: 50rpx;
+  height:50rpx;
+  position: absolute;
+  top:0;
+  right:0;
+  z-index: 9999;
+  
+}
+
+
+.jia{
+      margin:auto;
+    margin-top:77rpx;
+}
+.tfrboxsca{
+      background: #ededed;
+      color: #9d9e9d;
+      border:none;
+      border-radius: 244rpx;
+}
+
+
+
+.tfrboxscimg{
+  display: block;
+  width:100%;
+  height:auto;
+
+
+
+}
+
+
+
+.submit{
+  width:150rpx;
+  height:64rpx;
+  font-size: 32rpx;
+  line-height:64rpx;
+  border-radius: 10rpx;
+  text-align: center;
+
+  background: #ff5a57;
+    margin-top:60rpx;
+    color: #fff;
+    margin-right:50rpx;
+    position: absolute;
+    bottom:40rpx;
+    left:0;
+    right:0;
+    margin:auto;
+
+
+}
+
+.totijiao{
+  width:100%;
+  height:34rpx;
+  font-size: 24rpx;
+  line-height:34rpx;
+  border-radius: 10rpx;
+  text-align: center;
+    position: absolute;
+    bottom:120rpx;
+    left:0;
+    right:0;
+    margin:auto;
+    color: #666;
+}
+
+
+

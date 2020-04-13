@@ -1,0 +1,7 @@
+<!-- <button bindtap="map">定位</button> -->
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="18" polyline="{{polyline}}"show-location style="width: 100%; height: 900rpx;"
+subkey="WF3BZ-EWE6X-3FX45-TW43C-A4TRO-2OFFS"
+markers="{{markers}}"
+></map>
+<button bindtap="start">开始</button>
+<button bindtap="end">结束</button>

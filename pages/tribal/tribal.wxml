@@ -1,0 +1,41 @@
+<!--pages/tribal/tribal.wxml-->     
+<view class="write_box">
+ <textarea class="textarea" auto-focus  show-confirm-bar="{{confirm_bar}}"  bindinput="textarea_num"  maxlength='150'  placeholder='这一刻的想法......'></textarea>
+ <view class="area_tip"><text style='color:{{color}}'> {{font_num}} </text>/ 150</view>
+ <view class='torefund_box2'>
+            <!-- <view class='tfleft2'>上传图片:</view> -->
+            <view class='tfright2' >
+                  <view class="tfrboxsc"  wx:for="{{tempFilePaths}}"   wx:key="index" >
+                       <image class="tfrboxscimg" src="{{item}}" mode="aspectFill"  data-info="{{item}}" data-index="{{index}}"   catchtap="ylimg"></image>
+                       <image  class="del_img" bindtap='del_img'  src="../../static/images/images/del_write.png" data-index="{{index}}" ></image>
+                  </view>
+                  <view class="tfrboxsc tfrboxsca" wx:if="{{tempFilePaths.length<=8}}"  bindtap='chooseimg'>
+                        <image class="jia" src="../../static/images/images/24write_03.jpg"></image>
+                  </view>
+                  
+            </view>
+      </view>
+</view>
+
+
+
+       <view class="fengs" bindtap='bing_fen_gs'>
+
+             <!-- <view class="fengs_left" wx:if="{{fen_item_name==''}}">请选择活动</view> -->
+            <view class="fengs_left fengs_left1" wx:if="{{fen_item_name!=''}}">{{fen_item_name}}</view>
+            <image wx:if="{{fen_gs_show}}" src="../../static/images/images/bingbottom.png"></image>
+            <image wx:if="{{fen_gs_show==false}}" src="../../static/images/images/bingtop.png"></image>
+    
+
+       </view>
+
+               <view class="fen_list" wx:if="{{fen_gs_show}}">
+                  <view class='fen_li'   wx:for="{{active_list}}" wx:key="index" data-info="{{item}}" bindtap='bind_fen_item'>{{item.activity_name}}</view>
+            </view>
+   
+<!-- 图片预览 -->
+
+  <view class='submit' bindtap='submit'>发表</view>
+
+
+  <canvas canvas-id="canvas" style="width:{{cWidth}}px;height:{{cHeight}}px;position: absolute;left:-1000px;top:-1000px;"></canvas>

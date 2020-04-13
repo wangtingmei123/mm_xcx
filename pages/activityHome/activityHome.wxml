@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="wrapper">
+<image src='https://www.xindongguoji.com/static/image/images/03index_bg_02.png' class="img"></image>
+  <!-- <view class="banner">
+        
+  </view> -->
+  
+  <view class="wrapper_box">
+      <!-- <view class="title">
+            <image src='../../static/images/images/04active_05.png' class="icon"></image>活动列表
+      </view> -->
+<!-- 
+      <view class="active_list">
+            <view class="active_item" wx:for="{{rank}}" bindtap='toIcbcACtivityPage'  wx:key="index" data-info="{{item}}">
+                <view class="imgbox">
+                  <image class="img" wx:if="{{item.cover_logo!=''}}"  src="https://i.xindongguoji.com/{{item.cover_logo}}"></image>
+                  <image class="img" wx:if="{{item.cover_logo=='' || item.cover_logo==undefined}}"  src="../../static/images/images/04active_02_05.png"></image>
+
+                </view>
+                <view class="info">
+                      <view class="tit">{{item.activity_name}}</view>
+                      <view class="act">
+                          <view class="act_time">{{item.start_time}} ~ {{item.end_time}}</view>
+                          <view class="act_num"> <image src="../../static/images/images/04active_11.png"></image> {{item.attend_num}}人参加</view>
+                      </view>
+                </view>
+        </view>
+       </view> -->
+
+        <view class="active_list2" wx:for="{{rank}}"   wx:key="index" >
+           <view class="act_img" bindtap='toIcbcACtivityPage'  data-info="{{item}}">
+                <image wx:if="{{item.cover_logo!=''}}" lazy-load='true'  src="https://i.xindongguoji.com/{{item.cover_logo}}" mode="aspectFill"></image>
+                <image wx:if="{{item.cover_logo=='' || item.cover_logo==undefined}}"  lazy-load='true' src="https://www.xindongguoji.com/static/image/images/04active_list_03.png"></image>
+           </view>
+           <view class="act_name" bindtap='toIcbcACtivityPage'  data-info="{{item}}">{{item.activity_name}}</view>
+           <view class="act_time" bindtap='toIcbcACtivityPage'  data-info="{{item}}">
+                 <view class="act_time1">{{item.start_time}} ~ {{item.end_time}}</view>
+                 <view class="act_time2">{{item.attend_num}}人参加</view>
+
+           </view>
+
+           <!-- <view class="zhezhao" wx:if="{{item.start_status==1}}">活动已过期</view> -->
+
+        </view>
+
+  </view>
+</view>
+
+
