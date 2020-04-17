@@ -1,0 +1,51 @@
+<!--pages/luck_list/luck_list.wxml-->
+
+<view class="luck_list_box">
+
+  <view class="luck_list_tip">
+      <text class="my_lucktip"></text>
+      <text class="my_luck">我的奖品</text>
+  </view>
+
+  <view class="luck_list" wx:for="{{dataUrls}}" wx:key="index">
+     <view class="luck_left">
+          <view class="luck_con">{{item.prize_setup_title}}</view>
+          <view class="luck_time">中奖时间：{{item.add_time}}</view>
+     </view>
+     <view class="luck_right" wx:if="{{item.is_exchange==0 && item.is_xu_prize==0}}" bindtap='get_luck' data-index="{{index}}" data-info="{{item}}">兑换</view>
+     <view class="luck_right1" wx:if="{{item.is_exchange==1&& item.is_xu_prize==0}}">已兑换</view>
+  </view>
+
+
+</view>
+
+<view class="luck_list_box" style='padding-bottom:40rpx;'>
+
+  <view class="luck_list_tip">
+      <text class="my_lucktip"></text>
+      <text class="my_luck">收货地址</text>
+  </view>
+
+  <view class="adress_box" wx:if="{{address_status==0}}"  bindtap='add_adress'>
+      <view class="adress_left">
+          <view class="adress_name">填写收货人：</view>
+          <view class="adress_con">填写收货地址：</view>
+      </view>
+      <view class="adress_right"><image src="../../static/images/images/30_add_adress_03.png"></image></view>
+  </view>
+
+
+
+<view class="adress_box" wx:if="{{address_status==1}}">
+       <view class='itemnt'>
+            <view class='itemntname'>{{address_list.consignee}}</view>
+            <view class='itemnttel'>{{address_list.mobile}}</view>
+        </view>
+        <view class='itemntt_detail'>
+        {{address_list.province}}{{address_list.city}}{{address_list.district}}{{address_list.address}}
+        </view>
+        <view class="edit" bindtap='edit_adress'><image src="../../static/images/images/30_edit.png"></image></view>       
+    </view>
+
+
+</view>

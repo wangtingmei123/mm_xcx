@@ -1,0 +1,5 @@
+<!--pages/web_shop/web_shop.wxml-->
+<view class="container">
+  <web-view src="http://shop.xindongguoji.com/h5/">
+  </web-view>
+</view>

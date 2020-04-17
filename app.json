@@ -1,0 +1,77 @@
+{
+  "pages": [
+          
+          "pages/index/index",
+       "pages/shanghai_clock/shanghai_clock",
+      "pages/learning/learning",
+    "pages/tribal/tribal",
+      "pages/hitcard/hitcard",
+        "pages/hitcard1/hitcard1",
+       "pages/ranking_list/ranking_list",    
+      "pages/add_adress/add_adress",
+      "pages/active_passage/active_passage",
+      "pages/questions/questions",
+      "pages/scratch/scratch",
+      "pages/me/me",
+      "pages/activityHome/activityHome",
+      "pages/sports_tribe/sports_tribe",
+      "pages/data_list/data_list",
+      "pages/userinfo/userinfo",
+      "pages/winner_list/winner_list",
+      "pages/luck_draw1/luck_draw1",
+      "pages/luck_list/luck_list",
+      "pages/like_list/like_list",
+      "pages/tribe_detil/tribe_detil",
+      "pages/comments/comments",
+      "pages/home/home",
+      "pages/loginBycode/loginBycode",
+      "pages/login/login",
+      "pages/active_rules/active_rules"
+                
+  
+  ],
+  "window": {
+      "backgroundTextStyle": "dark",
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTitleText":"企业员工健步走",
+      "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": false,
+        "onReachBottomDistance": 100
+  },
+  "tabBar": {
+      "color": "#808080",
+      "selectedColor": "#ff5a57",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "iconPath": "static/images/images/03index_1.png",
+          "selectedIconPath": "static/images/images/03index_1_select.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/activityHome/activityHome",
+          "iconPath": "/static/images/images/03index_2.png",
+          "selectedIconPath": "/static/images/images/03index_2_select.png",
+          "text": "活动专区"
+        },
+        {
+          "pagePath": "pages/sports_tribe/sports_tribe",
+          "iconPath": "static/images/images/03index_3.png",
+          "selectedIconPath": "static/images/images/03index_3_select_03.png",
+          "text":"风采展示"
+        },
+        {
+          "pagePath": "pages/me/me",
+          "iconPath": "static/images/images/03index_4.png",
+          "selectedIconPath": "static/images/images/03index_4_select.png",
+          "text": "个人中心"
+        }
+      ]
+    },
+    "permission": {
+      "scope.userLocation": {
+        "desc": "您的位置将用于计步小程序获取打卡位置"
+      }
+    },
+   "sitemapLocation": "sitemap.json"
+}

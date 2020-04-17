@@ -1,0 +1,322 @@
+/* pages/me/me.wxss */
+
+page{
+  background: #f7f7f7;
+}
+
+
+.login_box{
+  width:100%;
+  height:321rpx;
+  margin:auto;
+  position: relative;
+}
+.login_box>image{
+  display: block;
+  width:100%;
+  height:100%;
+
+}
+
+.login_info{
+  width:650rpx;
+  height:130rpx;
+  position: absolute;
+  top:46rpx;
+  left:0;right:0;margin:auto;
+  overflow: hidden;
+
+}
+
+.login_info>.loinfo_left{
+  width:auto;
+  height:100%;
+  line-height:130rpx;
+  float: left;
+
+}
+
+.login_info>.loinfo_left>text{
+  display: block;
+  height:100%;
+  line-height:130rpx;
+  width:auto;
+  float: left;
+  color: #fff;
+  margin-left:14rpx;
+  font-size: 30rpx;
+}
+
+.login_info>.loinfo_left>image{
+  display: block;
+  width:130rpx;
+  height:130rpx;
+  float: left;
+  border-radius: 130rpx;
+}
+
+
+.login_info>.loinfo_left>.text{
+  display: block;
+  height:100%;
+  line-height:130rpx;
+  width:auto;
+  float: left;
+  color: #fff;
+  margin-left:14rpx;
+  font-size: 30rpx;
+}
+
+.login_info>.loinfo_left>.image{
+  display: block;
+  width:130rpx;
+  height:130rpx;
+  float: left;
+  border-radius: 130rpx;
+  overflow: hidden;
+}
+
+.login_info>.loinfo_right{
+  width:120rpx;
+  height:100%;
+  float: right;
+  
+}
+
+.shop_img{
+  display: block;
+  width:45rpx;
+  height:45rpx;
+  margin:auto;
+  margin-top:28rpx;
+
+}
+
+.shop_tip{
+  width:100%;
+  height:22rpx;
+  font-size: 22rpx;
+  line-height:22rpx;
+  margin-top:4rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.shaws{
+  width:676rpx;
+  margin:auto;
+  height:180rpx;
+  box-shadow: 0rpx 10rpx 20rpx #f0e9e8;
+}
+
+.jifeng_box{
+  position: absolute;
+  left:0;
+  right:0;
+  margin:auto;
+  top:197rpx;
+  width:678rpx;
+  height:306rpx;
+  background: #fff;
+  border-radius: 12rpx;
+
+}
+
+.jif_top{
+  width:634rpx;
+  height:65rpx;
+  margin:auto;
+  margin-top:32rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #545454;
+
+}
+
+.ji_top_left,.ji_top_right{
+  width:auto;
+  height:100%;
+  font-size: 26rpx;
+  line-height:65rpx;
+}
+
+.ji_top_left>text{
+
+  line-height:45rpx;
+  font-weight: bold;
+      font-family: 'DINCondensedC';
+      font-size: 50rpx;
+}
+
+.ji_top_right>image{
+  width: 17rpx;
+  height:29rpx;
+  vertical-align: middle;
+  margin-left:16rpx;
+}
+
+.jifimg{
+  display: block;
+  width:281rpx;
+  height:120rpx;
+  margin-left:184rpx;
+}
+
+.jif_center{
+  width:100%;
+  height:42rpx;
+  margin-top:30rpx;
+  font-size: 26rpx;
+  text-align: center;
+  line-height:32rpx;
+  font-weight:700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jif_center>text{
+  color: #ff5a57;
+}
+
+.jif_center>.fc_num{
+  font-size: 40rpx;
+  margin-left:6rpx;
+  margin-right:6rpx;
+  font-family: 'DINCondensedC';
+
+}
+
+.jif_bottom{
+  width:612rpx;
+  height:69rpx;
+  margin:auto;
+  margin-top:38rpx;
+
+}
+
+.jifb_1{
+  display: block;
+  width:69rpx;
+  height:69rpx;
+  float: left;
+
+}
+
+.jifb_2{
+  width:90rpx;
+  height:69rpx;
+  float: left;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jifb_2>.b2_hen{
+  width:32rpx;
+  height:2rpx;
+  background: #ccc;
+}
+
+.jifb_2>.b2_num{
+  width:56rpx;
+  height:56rpx;
+  border:2rpx solid #ccc;
+  color: #ccc;
+  font-size: 26rpx;
+  line-height:56rpx;
+  text-align: center;
+  border-radius: 56rpx;
+  position: relative;
+}
+
+.b2_num>image{
+  width: 33rpx;
+  height:30rpx;
+  display: block;
+  position: absolute;
+  top:-14rpx;
+  left:28rpx;
+
+}
+
+.me_center{
+  width:100%;
+  height:90rpx;
+  text-align: center;
+  line-height:90rpx;
+  font-size: 24rpx;
+  color: #545454;
+
+}
+
+
+
+.charts{
+  width:680rpx;
+  height:500rpx;
+  background: #fff;
+  margin:auto;
+  overflow: hidden;
+  margin-bottom:20rpx;
+
+}
+
+.charts>.charts_title{
+  width:100%;
+  height:30rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height:30rpx;
+  margin-top:32rpx;
+
+}
+
+.charts>.week{
+width:100%;
+height:44rpx;
+color: #ff5a57;
+padding-left:20rpx;
+padding-right:20rpx;
+box-sizing: border-box;
+font-size: 24rpx;
+line-height:24rpx;
+overflow: hidden;
+margin-top:30rpx;
+
+}
+
+.charts>.week>.to_frist{
+  float: left;
+   line-height: 44rpx;
+  margin-top:10rpx;
+}
+
+.charts>.week>.to_last{
+  float: right;
+    height:100%;
+   line-height: 44rpx;
+}
+.canvas {
+
+    margin:auto;
+    margin-top:20rpx;
+}
+
+.title_canvas{
+      margin:auto;
+      font-size: 26rpx;
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      padding-left: 25rpx;
+      padding-right: 25rpx;
+      box-sizing: border-box;
+
+}
+
+.title_canvas>text{
+  display: block;
+}

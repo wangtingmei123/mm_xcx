@@ -1,0 +1,72 @@
+<!--pages/add_adress/add_adress.wxml-->
+
+<view class="luck_list_box">
+
+  <view class="luck_list_tip">
+      <text class="my_lucktip"></text>
+      <text class="my_luck">填写收货地址</text>
+  </view>
+
+<view class="address_box">
+    <view class="luck_list">
+        <view class="address_tip">联系姓名：</view> <input  placeholder='请填写联系姓名' placeholder-class="input" bindinput='name' value='{{name}}'></input>
+    </view>
+    <view class="luck_list">
+        <view class="address_tip">联系电话：</view>  <input  type='number'  placeholder='请填写联系电话' placeholder-class="input" bindinput='phone' value='{{phone}}'></input>
+    </view>
+    <view class="luck_list">
+        <view class="address_tip">所在地区：</view> 
+        <view class="choos" bindtap="translate" wx:if="{{choos==0}}">
+              请选择所在地区
+        </view> 
+        <view class="choos" style='color:#000' bindtap="translate" wx:else>
+              {{province}} {{city}} {{county}}
+        </view> 
+        <image  class="choos_tip" src="../../static/images/images/26_me_11.jpg" bindtap="translate"></image>  
+
+    </view>
+    <view class="luck_list">
+        <view class="address_tip">详细地址：</view>  
+        <input placeholder='请填写详细地址（街道、楼牌号等）'  placeholder-class="input" bindinput='detailed_adress' value='{{detailed_adress}}'></input>  
+    </view>
+  </view>
+
+</view>
+
+
+
+    <view class="choujiang" bindtap='add_adress' wx:if="{{edit==0}}">添加</view>
+    <view class="choujiang" bindtap='add_adress' wx:if="{{edit==1}}">修改</view>
+
+
+
+
+  
+  <view class="animation-element-wrapper {{show ? 'visible':'hidden'}}" animation="{{animation}}"  bindtap="hiddenFloatView" data-id="444">
+     <view class="animation-element" catchtap="nono">
+        <!-- <text class="left-bt" catchtap="hiddenFloatView" data-id="555">取消</text> -->
+        <text class="right-bt" catchtap="hiddenFloatView" data-id="666">确定</text>
+          <view class="line"></view> 
+
+        <picker-view indicator-style = "height: 50rpx;" value="{{value}}" bindchange="bindChange" catchtap="nono">
+        <!--省-->
+        <picker-view-column>
+           <view wx:for="{{provinces}}" wx:for-item="sheng" wx:key="">
+             {{sheng.name}}
+          </view>
+        </picker-view-column>
+        <!--地级市-->
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:key="">
+            {{item.name}}
+          </view>
+        </picker-view-column>
+        <!--区县-->
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:key="">
+            {{item.name}}
+          </view>
+        </picker-view-column>
+        </picker-view>
+    </view>
+  </view>

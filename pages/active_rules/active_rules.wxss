@@ -1,0 +1,33 @@
+page{
+  display: block;
+  background: #fff;
+}
+
+.rules_box{
+  width:90%;
+  height:auto;
+  line-height: 50rpx;
+  margin:auto;
+  padding-bottom:40rpx;
+
+}
+
+
+.title{
+  font-size: 32rpx;
+  line-height:48rpx;
+  font-weight: bold;
+  margin-top:40rpx;
+}
+
+.con{
+    font-size: 30rpx;
+  line-height:46rpx;
+  margin-top:20rpx;
+  /* text-indent: 2em; */
+}
+
+.con1{
+  box-sizing: border-box;
+  margin-top:5rpx;
+}

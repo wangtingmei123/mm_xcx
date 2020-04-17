@@ -1,0 +1,98 @@
+/* pages/like_list/like_list.wxss */
+page{
+  background: #f4f4f4;
+}
+.like_box{
+  width:700rpx;
+  height:auto;
+  padding-left:18rpx;
+  padding-right:30rpx;
+  border-radius: 12rpx;
+  box-shadow: 0rpx 0rpx 2rpx 2rpx #ededed;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  margin:auto;
+  margin-top:10rpx;
+  background: #fff;
+  overflow: hidden;
+
+
+}
+
+
+.sports_title{
+  width:100%;
+  height:80rpx;
+  overflow: hidden;
+    padding-left:12rpx;
+    box-sizing: border-box;
+    border-bottom:1rpx solid #ededed;
+    margin-top:10rpx;
+    /* padding-bottom:10rpx; */
+    
+
+}
+.sports_title:last-child{
+  border:none;
+}
+
+.spo_tit_left{
+  width:auto;
+  height:100%;
+  float: left;
+  overflow: hidden;
+}
+
+.spo_tit_left>.tit_photo{
+  width:70rpx;
+  height:70rpx;
+  float: left;
+  border:1rpx solid #ededed;
+  border-radius: 70rpx;
+  overflow: hidden;
+}
+
+.spo_tit_left>.tit_photo>image{
+  display: block;
+  width:100%;
+  height:100%;
+}
+
+.spo_tit_left>.tit_info{
+  width:auto;
+  height:100%;
+  float: left;
+  overflow: hidden;
+  margin-left:15rpx;
+    line-height:70rpx;
+    font-size: 28rpx;
+}
+
+
+.spo_tit_left>.tit_bumen{
+  width:auto;
+  height:100%;
+  float: left;
+  overflow: hidden;
+  margin-left:30rpx;
+    line-height:70rpx;
+  color: #999;
+  font-size: 24rpx;
+}
+.tit_bumen>image{
+  width:18rpx;
+  height:18rpx;
+  vertical-align: middle;
+}
+.tit_bumen>text{
+  margin-left:8rpx;
+}
+
+.spo_tit_right{
+  width:auto;
+  height:100%;
+  line-height:70rpx;
+  float: right;
+    font-size: 24rpx;
+  color: #999;
+}

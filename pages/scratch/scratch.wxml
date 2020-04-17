@@ -1,0 +1,73 @@
+<view class="scratch">
+  <view class="namelink" bindtap='toWinnerListPage' wx:if="{{is_issue==1}}">
+    <image class="img" src="https://www.xindongguoji.com/static/image/images/11guaj_03.jpg"></image>
+    <view class="link_word">中奖名单</view>  
+  </view>
+
+  <image src="https://www.xindongguoji.com/static/image/images/11gua_02.jpg" class="scra_bg"></image>
+
+	<view class="scratch_box">
+		<view class="canvas">
+
+      <!--抽奖页面三种状态 需要哪个显示哪个-->
+
+
+
+
+      <image src="../../static/images/images/15mask_03.jpg" class="brand" wx:if="{{start_status==3 && is_selected == 0 && draw_image != ''}}"></image>
+      <image src="../../static/images/images/16mask3_03.jpg" class="brand" wx:if="{{start_status==3 && is_selected == 1 && draw_image != ''}}"></image>
+			<canvas wx:if="{{start_status==3 && is_can_luck_draw == 1 && user_draw_status==0}}"  canvas-id="canvas" bindtouchstart="mytouchstart" bindtouchmove="mytouchmove" bindtouchend="mytouchend" class="canvas_box"></canvas>
+		</view>
+		<view class="scratch_box_word">已有{{attend_num}}人参与抽奖</view>
+
+	</view>
+
+
+
+
+		<view class="backhome" bindtap='toActivityHome'>返回首页</view>
+    <!--   toWinnerListPage  toActivityHome   -->
+
+		<view class="tips" wx:if="{{prize_rule.length>0}}">
+      <image src="../../static/images/images/11guaj_11.png"></image>
+			<view class="tips_tit">
+       <image mode="widthFix" src="https://i.xindongguoji.com/{{prize_rule}}"></image>
+        <!-- <view class="txt"><text>{{prize_rule}}</text></view> -->
+      </view>
+		</view>
+
+</view>
+
+
+<cover-view class="chou_box"  wx:if="{{start_status==1}}" bindtap='close'>
+   <cover-view class="chou">
+        <cover-view class="chou_img" >
+            <cover-image src="../../static/images/images/13st1_03.jpg" style='width:300rpx;height:176rpx;margin:auto;margin-top:66rpx;'></cover-image>
+            <cover-view class="chou_tip" style='margin-top:30rpx'>抽奖未开始</cover-view>
+        </cover-view>
+        <cover-view class="close" ><cover-image style='width:100%;height:100%;' src="../../static/images/images/13close_03.png"></cover-image></cover-view>   </cover-view>
+</cover-view>
+
+
+<cover-view class="chou_box"  wx:if="{{start_status==3 && user_draw_status == 0 && standard_status==1}}"bindtap='close'>
+   <cover-view class="chou">
+        <cover-view class="chou_img"  >
+            <cover-image src="../../static/images/images/14st2_03.jpg" style='width:300rpx;height:205rpx;margin:auto;margin-top:50rpx;'></cover-image>
+            <cover-view class="chou_tip" style='margin-top:18rpx'>未达标请继续努力</cover-view>
+        </cover-view>
+        <cover-view class="close" ><cover-image style='width:100%;height:100%;' src="../../static/images/images/13close_03.png"></cover-image></cover-view>   </cover-view>
+</cover-view>
+
+
+
+
+<cover-view class="chou_box"  wx:if="{{start_status==2}}" bindtap='close'>
+   <cover-view class="chou">
+        <cover-view class="chou_img" >
+
+            <cover-image src="../../static/images/images/17st3_03.jpg" style='width:318rpx;height:182rpx;margin:auto;margin-top:72rpx;'></cover-image>
+            <cover-view class="chou_tip" style='margin-top:18rpx'>抽奖已结束，谢谢参与</cover-view>
+        </cover-view>
+         <cover-view class="close" ><cover-image style='width:100%;height:100%;' src="../../static/images/images/13close_03.png"></cover-image></cover-view>
+   </cover-view>
+</cover-view>

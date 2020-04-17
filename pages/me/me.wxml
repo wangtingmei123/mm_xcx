@@ -1,0 +1,79 @@
+<!--pages/me/me.wxml-->
+
+
+
+<view class="login_box">
+      <image src="../../static/images/images/26_me_02.png"></image>
+      <view class="login_info">
+
+            <view class="loinfo_left" wx:if="{{user==null&&user_id==0}}" bindtap='to_login'>
+                <image src="../../static/images/images/26_me_03.png"></image>
+                <text>授权登录</text>
+            </view>
+
+            <view class="loinfo_left" wx:if="{{user==null&&user_id==1}}" bindtap='to_login_l'>
+                <image src="../../static/images/images/26_me_03.png"></image>
+                <text>去登录</text>
+            </view>
+
+
+
+            <view class="loinfo_left" wx:if="{{user!=null}}">
+                <!-- <image src="{{user.avatarUrl}}"></image> -->
+                  <open-data class="image" type="userAvatarUrl"></open-data>
+                <!-- <text>{{user.nickName}}</text> -->
+                <open-data class="text"  type="userNickName"></open-data>
+
+            </view>
+        
+            <!-- <view class="loinfo_right">
+              <navigator url="../web_shop/web_shop" hover-class='none'>
+                  <image class="shop_img" src="../../static/images/images/26_me_06.png"></image>
+                  <view class="shop_tip">鑫福利商城</view>
+              </navigator>
+            </view> -->
+
+
+            <view class="loinfo_right" bindtap="to_index">
+                  <image class="shop_img" src="../../static/images/images/loging_to.png"></image>
+                  <view class="shop_tip">刷新</view>
+            </view>
+        
+      </view>
+
+
+</view>
+<view class="shaws"></view>
+<view class="jifeng_box">
+   <view class="jif_top">
+         <view class="ji_top_left">可用积分：<text>{{main_data.integral}}</text>   </view>
+         <view class="ji_top_right" wx:if="{{is_prize==1}}"  bindtap='to_luck'><text>积分抽奖</text><image src="../../static/images/images/26_me_11.jpg"></image></view>
+   </view>
+
+   <image class="jifimg" src="../../static/images/images/26_me_03_07.png"></image>
+   <view class="jif_center">已连续登录<text class="fc_num"> {{main_data.login_days}} </text><text>天</text></view>
+   <!-- <view class="jif_bottom">
+        <image class="jifb_1" src="../../static/images/images/26_me_18.png"></image>
+        <view class="jifb_2" wx:for="{{ch_data}}" wx:key="index">
+             <view class="b2_hen"></view>
+             <view class="b2_num">
+                  +{{main_data.login_score}}
+                <image wx:if="{{index==5}}" src="../../static/images/images/26_me_05.png"></image>
+             </view>
+        </view>
+   </view> -->
+</view>
+
+<view class="me_center">{{main_data.time}}，累计{{main_data.nums}}步，累计行走{{main_data.km}}公里</view>
+
+
+
+<view class="charts"> 
+    <view class="charts_title">第{{name_week}}周成绩</view>
+    <view class="week">
+          <view class="to_frist" bindtap='to_frist' data-info="{{now_num}}" wx:if="{{all_num>1&&week<all_num-1}}">上周成绩</view>
+          <view class="to_last"  bindtap='to_last' data-info="{{now_num}}" wx:if="{{week>0&&all_num>1}}">下周成绩</view> 
+    </view>
+    <canvas canvas-id="columnCanvas" class="canvas" disable-scroll='true' style='width:{{code_w}}px;height:{{code_h}}px'></canvas>
+    <view style='width:680rpx;height:auto;' class="title_canvas"> <text>周一</text> <text>周二</text> <text>周三</text> <text>周四</text> <text>周五</text> <text>周六</text> <text>周日</text> </view>
+</view>

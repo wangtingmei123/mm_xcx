@@ -1,0 +1,224 @@
+<!--pages/active_passage/active_passage.wxml-->
+
+<view class="active_box" wx:if="{{is_show==1}}">
+    <view class="active_home">
+          <view class="active_bg">
+              <image  src="https://i.xindongguoji.com/{{activity.index_logo}}" wx:if="{{activity.index_logo!=''}}"></image>
+               <image  class="act_bg_img" src="https://www.xindongguoji.com/static/image/images/05active_bg_02.jpg" wx:else></image>
+          </view>
+
+          <view class="active_word" wx:if="{{activity.index_logo=='' || activity.index_logo==undefined}}">
+              <image src="https://www.xindongguoji.com/static/image/images/05active_03.png"></image>
+          </view>
+          <view class="active_tip" wx:if="{{activity.is_logo==1}}">
+            <view class="acttip1">{{activity.activity_name}}</view>
+            <view class="acttip1 acttip2">活动时间：{{activity.start_time}} — {{activity.end_time}}</view>
+          </view>
+
+          <image wx:if="{{active_but4==true}}" class="dati" src="../../static/images/images/05acta_03.png" bindtap='to_quest'></image>
+
+          
+          <image wx:if="{{pize}}" class="dati chjiang" src="../../static/images/images/01to_luck_03_03_03.png" bindtap='to_chjiang'></image>
+
+
+        <view class="logo_image" wx:if="{{activity.is_logo==1&&activity.logo_location==2}}" >
+            <image  class="act_logo" src="https://i.xindongguoji.com/{{activity.activity_img}}" mode="widthFix"></image>
+            <!-- <image></image> -->
+        </view>
+           <view class="logo_image logo_image1" wx:if="{{activity.is_logo==1&&activity.logo_location==1}}" >
+            <image  class="act_logo" src="https://i.xindongguoji.com/{{activity.activity_img}}" mode="widthFix"></image>
+        </view>
+           <view class="logo_image logo_image2" wx:if="{{activity.is_logo==1&&activity.logo_location==3}}" >
+            <image  class="act_logo" src="https://i.xindongguoji.com/{{activity.activity_img}}" mode="widthFix"></image>
+        </view>
+           <!-- <image class="act_logo1" src="../../static/images/images/05active_logo_04.png"></image>
+          <image class="act_logo2" src="../../static/images/images/05active_logo_04.png"></image> -->
+
+    </view>
+   
+   <view class="active_btn">
+        <view class="active_btn1 {{act_lebgth==1?'act_lebgth':''}}" bindtap='to_ranklist' wx:if="{{active_but1==true && activity_id!=87}}">  
+             <image wx:if="{{act_lebgth==1}}" src="../../static/images/images/05cat_length_09.png"></image>
+            <image wx:else  src="../../static/images/images/05ac_home_03.png"></image>
+            <view class="btn_falo">活动排名</view>
+         </view>
+
+          <view class="active_btn1 {{act_lebgth==1?'act_lebgth':''}}" bindtap='to_ranklist' wx:if="{{active_but1==true  && activity_id==87 }}">  
+             <image wx:if="{{act_lebgth==1}}" src="../../static/images/images/rankpaim.png"></image>
+            <image wx:else  src="../../static/images/images/05ac_home_03.png"></image>
+         </view>
+
+
+         <view class="active_btn1  {{act_lebgth==1?'act_lebgth':''}}" bindtap='to_hitcard' wx:if="{{active_but2==true}}">  
+            <image wx:if="{{act_lebgth==1}}" src="../../static/images/images/05cat_length_03.png"></image>
+            <image wx:else src="../../static/images/images/05ac_home_08.png"></image>
+            <view class="btn_falo">活动打卡</view>
+         </view>       
+         <view class="active_btn1  {{act_lebgth==1?'act_lebgth':''}}" bindtap='to_luck' wx:if="{{active_but3==true}}">  
+            <image wx:if="{{act_lebgth==1}}" src="../../static/images/images/05cat_length_07.png"></image>
+            <image wx:else src="../../static/images/images/05ac_home_05.png" ></image>
+            <view class="btn_falo">活动抽奖</view>
+         </view>
+      
+       </view>
+
+    <view wx:if="{{activity_id==86}}" class="fencai_but" bindtap="to_tribe" >  
+        <image  src="../../static/images/images/fencai_03.png"></image>
+    </view>
+</view>
+
+
+
+
+<view class="active_box" wx:if="{{is_show==2}}">
+    <view class="active_home">
+          <view class="active_bg">
+              <image  src="https://i.xindongguoji.com/{{activity.index_logo}}" wx:if="{{activity.index_logo!=''}}"></image>
+               <image  src="https://www.xindongguoji.com/static/image/images/01zx_active_bg.jpg" wx:else></image>
+          </view>
+
+          <view class="active_tip" wx:if="{{activity.is_logo==1}}">
+            <view class="acttip1">{{activity.activity_name}}</view>
+            <view class="acttip1 acttip2">活动时间：{{activity.start_time}} — {{activity.end_time}}</view>
+          </view>
+
+        <view class="logo_image" wx:if="{{activity.is_logo==1&&activity.logo_location==2}}" >
+            <image  class="act_logo" src="https://i.xindongguoji.com/{{activity.activity_img}}" mode="widthFix"></image>
+            <!-- <image></image> -->
+        </view>
+           <view class="logo_image logo_image1" wx:if="{{activity.is_logo==1&&activity.logo_location==1}}" >
+            <image  class="act_logo" src="https://i.xindongguoji.com/{{activity.activity_img}}" mode="widthFix"></image>
+        </view>
+           <view class="logo_image logo_image2" wx:if="{{activity.is_logo==1&&activity.logo_location==3}}" >
+            <image  class="act_logo" src="https://i.xindongguoji.com/{{activity.activity_img}}" mode="widthFix"></image>
+        </view>
+           <!-- <image class="act_logo1" src="../../static/images/images/05active_logo_04.png"></image>
+          <image class="act_logo2" src="../../static/images/images/05active_logo_04.png"></image> -->
+
+
+        <image wx:if="{{active_but1==true}}" class="dati paihang" src="../../static/images/images/01zx_active_but_03.png" bindtap='to_ranklist'></image>
+            <image wx:if="{{active_but3==true}}" class="dati paihang pailuck" src="../../static/images/images/01zx_active_but_06.png" bindtap='to_luck'></image>
+
+
+    </view>
+
+              
+  <view class="today_bushu">今日步数：<text>{{current_step}}</text> 步</view><text></text>
+
+  
+
+   <view class="active_btn" wx:if="{{active_but4==true}}">
+        <view class="active_btn1 active_btn1a" bindtap='to_quest' >  
+             <image  src="../../static/images/images/05cat_length_09.png"></image>
+             <view class="btn_falo">点亮21天</view>
+         </view>
+    </view>
+
+
+
+
+
+   <button wx:if="{{to_app}}"  class='to_app'  open-type="launchApp" app-parameter="wechat" binderror="launchAppError">返回APP</button>
+
+
+
+
+</view>
+
+
+    <view wx:if="{{activity_id==87}}" class="act_gz" bindtap="to_rules">活动规则</view>
+
+
+<view class="active_box" wx:if="{{is_show==3}}">
+    <view class="active_home">
+          <view class="active_bg">
+              <image  src="https://i.xindongguoji.com/{{activity.index_logo}}" wx:if="{{activity.index_logo!=''}}"></image>
+               <image  class="act_bg_img" src="https://www.xindongguoji.com/static/image/images/05active_bg_02.jpg" wx:else></image>
+          </view>
+
+          <view class="active_word" wx:if="{{activity.index_logo=='' || activity.index_logo==undefined}}">
+              <image src="https://www.xindongguoji.com/static/image/images/05active_03.png"></image>
+          </view>
+          <view class="active_tip" wx:if="{{activity.is_logo==1}}">
+            <view class="acttip1">{{activity.activity_name}}</view>
+            <view class="acttip1 acttip2">活动时间：{{activity.start_time}} — {{activity.end_time}}</view>
+          </view>
+          
+          <image wx:if="{{pize}}" class="dati chjiang" src="../../static/images/images/01to_luck_03_03_03.png" bindtap='to_chjiang'></image>
+
+        <view class="logo_image" wx:if="{{activity.is_logo==1&&activity.logo_location==2}}" >
+            <image  class="act_logo" src="https://i.xindongguoji.com/{{activity.activity_img}}" mode="widthFix"></image>
+            <!-- <image></image> -->
+        </view>
+           <view class="logo_image logo_image1" wx:if="{{activity.is_logo==1&&activity.logo_location==1}}" >
+            <image  class="act_logo" src="https://i.xindongguoji.com/{{activity.activity_img}}" mode="widthFix"></image>
+        </view>
+           <view class="logo_image logo_image2" wx:if="{{activity.is_logo==1&&activity.logo_location==3}}" >
+            <image  class="act_logo" src="https://i.xindongguoji.com/{{activity.activity_img}}" mode="widthFix"></image>
+        </view>
+
+
+    </view>
+   <view class="active_btn">
+        <view class="active_btn1 {{act_lebgth==1?'act_lebgth':''}}" bindtap='to_ranklist' wx:if="{{active_but1==true}}">  
+             <image wx:if="{{act_lebgth==1}}" src="../../static/images/images/05cat_length_09.png"></image>
+            <image wx:else  src="../../static/images/images/05ac_home_03.png"></image>
+            <view class="btn_falo">活动排名</view>
+         </view>
+         <view class="active_btn1  {{act_lebgth==1?'act_lebgth':''}}" bindtap='to_hitcard' wx:if="{{active_but2==true}}">  
+            <image wx:if="{{act_lebgth==1}}" src="../../static/images/images/05cat_length_03.png"></image>
+            <image wx:else src="../../static/images/images/05ac_home_08.png"></image>
+            <view class="btn_falo">实地打卡</view>
+         </view>       
+         <view class="active_btn1  {{act_lebgth==1?'act_lebgth':''}}" bindtap='to_luck' wx:if="{{active_but3==true}}">  
+            <image wx:if="{{act_lebgth==1}}" src="../../static/images/images/05cat_length_07.png"></image>
+            <image wx:else src="../../static/images/images/05ac_home_05.png" ></image>
+            <view class="btn_falo">活动抽奖</view>
+         </view>
+         <view class="active_btn1  {{act_lebgth==1?'act_lebgth':''}}" bindtap='to_quest' wx:if="{{active_but4==true}}">  
+            <image wx:if="{{act_lebgth==1}}" src="../../static/images/images/05cat_length_07.png"></image>
+            <image wx:else src="../../static/images/images/05ac_home_05.png" ></image>
+            <view class="btn_falo">线上答题</view>
+         </view>
+       </view>
+</view>
+
+
+
+<view class="dabiao_tishi" wx:if="{{is_standard==1}}">
+   <view class="dabiao_box">
+      <view class="dabiao_tip">达标抽奖</view>
+      <view class="da_xi1">恭喜您</view>
+      <view class="da_xi2">获得一次达标抽奖机会</view>
+      <image class="da_xi3" src="../../static/images/images/05_act_tankaung_03.jpg"></image>
+      <view class="to_choujiang" bindtap='to_scratch' >去抽奖</view>
+   </view>
+</view>
+
+
+
+
+
+
+<view class="tishi_box" bindtap='hide_ts' wx:if="{{tishi==true}}">
+   <view class="tishi">
+       <view class="ts_top">个人获奖情况</view>
+       <view class="ts_center">
+           <view class="tsc">
+                 <view class="tsc_main tsc_main1">{{getPrizeDetails.name}}，本次活动获得:</view>
+           </view>
+          
+            <view class="tsc">
+                 <view class="tsc_maina" wx:if="{{getPrizeDetails.d_num>0}}"><text>达标奖</text><text class='sh_num'>x{{getPrizeDetails.d_num}}</text><text class='sh_num'>{{getPrizeDetails.d_money}}</text></view>
+                 <view class="tsc_maina" wx:if="{{getPrizeDetails.c_num>0}}"><text>参与奖</text><text  class='sh_num'>x{{getPrizeDetails.c_num}}</text><text class='sh_num'>{{getPrizeDetails.c_money}}</text></view>
+                <view class="tsc_maina" wx:if="{{getPrizeDetails.y_num>0}}"><text>优胜奖</text><text  class='sh_num'>x{{getPrizeDetails.y_num}}</text><text class='sh_num'>{{getPrizeDetails.y_money}}</text></view>
+                 <view class="tsc_main">累计获得<text class='sh_num'>{{getPrizeDetails.sum}}</text>元奖励</view>
+           </view>
+      
+       </view>
+       <view class="ts_but" bindtap="hide_tishi">我知道了</view>
+   </view>
+</view>
+
+
+

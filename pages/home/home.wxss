@@ -1,0 +1,30 @@
+page{
+	width:100%;
+	height:100%;
+	position:relative;
+	background:url(http://www.xindongguoji.com/static/image/china_unicom/activity_face.jpg) no-repeat;
+	background-size:cover;
+}
+.bgcover{
+	width:100%;
+	position:relative;
+}
+.viewsort__Btn{
+	width:154px;
+	height:38px;
+	position:absolute;
+	left:50%;
+	bottom:220rpx;
+	z-index:99;
+	margin-left:-77px;
+}
+.btnimg{
+	width:100%;
+	height:100%;
+}
+@media only screen and (min-height: 724px){
+	.viewsort__Btn{
+		bottom:350rpx;
+	}
+
+}

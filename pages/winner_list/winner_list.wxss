@@ -1,0 +1,146 @@
+/**index.wxss**/
+page{
+  background: #f7f7f7;
+    overflow: hidden;
+}
+.wrapper{
+	position:fixed;
+	width:100%;
+	height:auto;
+  z-index: 9999;
+  top:0;
+
+}
+.banner{
+	width:100%;
+	height:370rpx;
+}
+.banner .img{
+  width:100%;
+  height:100%;
+}
+.banner .info{
+	position:absolute;
+	left:84rpx;
+	top:0;
+	z-index:9;
+	width:600rpx;
+	height:370rpx;
+}
+.banner .info .tit{
+	font-size:24rpx;
+	font-family:PingFangSC-Medium;
+	color:#fff;
+	line-height:34rpx;
+  margin-top:88rpx;
+  width:100%;
+  height:auto;
+  
+}
+
+.banner .info .verson{
+	font-size:26rpx;
+	font-family:PingFangSC-Medium;
+	color:#fff;
+	line-height:28rpx;
+  margin-top:88rpx;
+  width:100%;
+  height:28rpx;
+  position: absolute;
+  bottom:78rpx;
+}
+
+
+.scroll_qishu{
+  height:98rpx;
+    white-space: nowrap;
+    width:710rpx;
+    margin: auto;
+    margin-top:12rpx;
+    background: #fff;
+
+
+}
+
+.qishu{
+  width:auto;
+  padding-left:20rpx;
+  padding-right:20rpx;
+  height:100%;
+  display: inline-block;
+  text-align: center;line-height: 98rpx;
+  font-size: 32rpx;
+  color: #999;
+  position: relative;
+
+}
+
+
+.qi_flex{
+  position: absolute;
+  bottom:20rpx;
+  height:1px;
+  width:98rpx;
+  left:0;right:0;margin:auto;
+  background: #ff5a57;
+}
+
+
+.qi_color{
+ color: #ff5a57;
+}
+
+
+
+
+
+
+
+
+
+.namelist{
+ width: 710rpx;
+ height: calc(100vh - 482rpx);
+ /* height:auto; */
+ margin: auto;
+  margin-top:482rpx;
+  margin-bottom:10rpx;
+}
+.namelist .item{
+	width:100%;
+  height:90rpx;
+  border-bottom:1rpx solid #e6e6e6;
+  background: #fff;
+  line-height:90rpx;
+}
+
+.namelist .item:last-child{
+border:none;
+}
+
+.namelist .item .num{
+	float:left;
+	width:auto;
+	font-size:30rpx;
+	font-family:DINCondensed-Bold;
+	color:rgba(108,108,108,1);
+  margin-left:48rpx;
+}
+.namelist .item .name{
+  float:left;
+	width:auto;
+	font-size:30rpx;
+	font-family:DINCondensed-Bold;
+	color:rgba(108,108,108,1);
+  margin-left:68rpx;
+
+}
+
+.namelist .item .depart{
+	float:right;
+	width:auto;
+	font-size:26rpx;
+	font-family:DINCondensed-Bold;
+	color:rgba(108,108,108,1);
+  margin-right:42rpx;
+}

@@ -1,0 +1,219 @@
+/* pages/luck_list/luck_list.wxss */
+page{
+  background: #f7f7f7;
+}
+
+.luck_list_box{
+  width:710rpx;
+  height:auto;
+  margin:auto;
+   margin-top:12rpx;
+   border-radius: 12rpx;
+   box-shadow: 0rpx 0rpx 5rpx 10rpx #f5f4f4;
+   background: #fff;
+}
+
+.luck_list_tip{
+  width:100%;
+  height:89rpx;
+  line-height:89rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+
+
+}
+
+.luck_list_tip>.my_lucktip{
+  display: block;
+  width:4rpx;
+  height:35rpx;
+  background:#ff5a57;
+  float: left;
+ margin-top:30rpx;
+ margin-left:26rpx;
+
+}
+
+.luck_list_tip>.my_luck{
+  display: block;
+    float: left;
+    margin-left:12rpx;
+
+}
+
+.luck_list{
+  width:682rpx;
+  height:auto;
+
+}
+
+.luck_list{
+  width:682rpx;
+  height:102rpx;
+  line-height:102rpx;
+  color: #0a0a0a;
+  font-size: 28rpx;
+  border-top:1rpx solid #ededed;
+  overflow: hidden;
+  margin:auto;
+}
+
+.luck_list>.luck_left{
+  width:auto;
+  height:100%;
+  float: left;
+    font-size: 28rpx;
+}
+
+.luck_list>.luck_right{
+  width:auto;
+  height:100%;
+  float: right;
+    font-size: 28rpx;
+    color: #ff5a57;
+    margin-right:20rpx;
+}
+
+.luck_right1{
+  width:auto;
+  height:100%;
+  float: right;
+    font-size: 28rpx;
+    color: #999;
+    margin-right:20rpx;
+}
+
+
+.luck_left>.luck_con{
+  max-width:250rpx;
+  margin-left:25rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+  font-size: 28rpx;
+
+}
+
+
+.luck_left>.luck_time{
+  margin-left:25rpx;
+  font-size: 24rpx;
+  color: #999;
+    float: left;
+  
+}
+
+.adress_box{
+  width:632rpx;
+  height:240rpx;
+  background: #ededed;
+  margin:auto;
+  font-size: 28rpx;
+  overflow: hidden;
+  border-radius: 5rpx;
+  position: relative;
+  
+}
+
+.adress_left{
+  width:auto;
+  height:100%;
+  float: left;
+  margin-left:28rpx;
+}
+
+.adress_left>.adress_name{
+   width:auto;
+   height:28rpx;
+   font-size: 28rpx;
+   line-height:28rpx;
+   margin-top:60rpx;
+  letter-spacing:6rpx;
+
+}
+
+.adress_left>.adress_con{
+     width:auto;
+   height:28rpx;
+   font-size: 28rpx;
+   line-height:28rpx;
+   margin-top:60rpx;
+}
+
+.adress_right{
+  float: right;
+  width:100rpx;
+  height:100rpx;
+  margin-top:70rpx;
+  margin-right:48rpx;
+
+}
+
+.adress_right>image{
+  display: block;
+  width:100%;
+  height:100%;
+}
+
+
+
+
+
+
+
+
+
+.itemnt{
+  display: block;
+  width:auto;
+  height:28rpx;
+  color: #34364d;
+  margin-top:60rpx;
+  line-height:28rpx;
+  margin-left:28rpx;
+
+}
+
+
+
+.itemntt_detail{
+    display: block;
+  width:580rpx;
+  height:auto;
+  line-height:36rpx;
+  font-size: 28rpx;
+  font-weight: normal;
+  float: none;
+  margin-top:45rpx;
+  color: #363636;
+    margin-left:28rpx;
+}
+
+.itemntname{
+  width:auto;
+  height:100%;
+  float: left;
+}
+
+.itemnttel{
+  width:auto;
+  height:100%;
+  margin-left:20rpx;
+  float: left;
+
+}
+
+
+.edit{
+  position: absolute;
+  top:40rpx;
+  right:35rpx;
+  width:60rpx;
+  height:60rpx;
+}
+.edit>image{
+  display: block;
+  width:100%;
+  height:100%;
+}

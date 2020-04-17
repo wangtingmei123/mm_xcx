@@ -1,0 +1,58 @@
+<view class="login">
+    <view class="logo">
+      <image src="../../static/images/images/02loao_03.png"></image>
+    </view>
+
+  <view class="form-login">
+        <form class="form-login" bindsubmit="formSubmit" bindreset="formReset">
+      
+          <view class="form-item user">
+                <image src="../../static/images/images/02log_03.png"></image>
+                <input name="account" type="number" placeholder="请输入手机号" bindinput ="userMobileInput" />
+                <text class="phone_tip">{{phone_tip}}</text>
+
+          </view>
+          <view class="form-item psw">
+              <image src="../../static/images/images/02log_06.png" class="passimg"></image>
+                <input name="password" placeholder="请输入密码" type="password" bindinput='userpass' />
+                <text class="phone_tip">{{password_tip}}</text>
+
+          </view>
+          <view class="submit-btn">
+                <button class="log_btn" formType="submit" >登录</button>
+          </view>
+          <view class="to_fangshi">
+            <navigator url="../loginBycode/loginBycode" class="nl">验证码登录</navigator>
+            <!-- <navigator url="/" class="nr">忘记密码？</navigator> -->
+          </view>
+        </form>
+    </view>
+</view>
+
+
+
+
+
+<view class="tishi_box" bindtap='hide_ts' wx:if="{{tishi}}">
+   <view class="tishi">
+       <view class="ts_top">温馨提示</view>
+       <view class="ts_center">
+            <view class="tsc">          
+              <view class="tsc_main tsc_maina">尊敬的用户您好:</view>
+                    <view class="tsc_main">
+                           鑫福利健步走小程序是面向企业提供相关健康服务的内部应用，
+                            如您所在企业未举办任何健步走活动则代表您不具有会员权限无法参与活动，
+                            请使用您提供给工会或企业的手机号进行验证码登录，或者使用手机号+密码的方式进行账号密码登录。
+                            如您依然无法登录可拨打我们的客服热线：400-670-0690.
+                            
+                    </view>
+                    <view class="tsc_main">
+                         
+                            感谢您的谅解，鑫福利祝您工作顺利。
+                    </view>
+           </view>
+       </view>
+       <view class="ts_but" bindtap="hide_tishi">去登录 </view>
+         <view class="ts_but1" bindtap="to_tishi">暂不登录 </view>
+   </view>
+</view>

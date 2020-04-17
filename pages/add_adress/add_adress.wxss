@@ -1,0 +1,249 @@
+/* pages/add_adress/add_adress.wxss */
+
+/* pages/luck_list/luck_list.wxss */
+page{
+  background: #f7f7f7;
+}
+
+
+
+
+
+
+
+.animation-element-wrapper .infoText{
+    margin-top: 20rpx;
+    text-align: center;
+    width: 100%;
+    justify-content: center; 
+    position: absolute;
+    top:0;
+    left: 0;
+    height:100vh;
+
+    background: #fff;
+}
+
+.animation-element-wrapper picker-view{
+  background-color: white;
+  padding: 0;
+  width: 100%; 
+  height: 480rpx;
+  bottom: 0;
+  position: fixed;
+}
+
+.animation-element-wrapper picker-view-column view{
+  vertical-align:middle; 
+  font-size: 28rpx;
+  line-height: 28rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----------------------------------------- */
+
+.animation-element-wrapper {
+  display: flex;  
+  position: fixed;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.visible{
+  visibility:visible;
+}
+
+.animation-element {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 570rpx;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.animation-element-wrapper .animation-button {
+  margin-top: 20rpx;
+  top:20rpx;
+  width: 400rpx;
+  height: 100rpx; 
+  line-height: 100rpx; 
+  align-items:center;
+}
+
+
+.animation-element-wrapper text{
+  color: #999999;
+  display: inline-flex;  
+  position: fixed;
+  margin-top: 20rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 34rpx;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.animation-element-wrapper .left-bt{
+  left: 30rpx;
+}
+.animation-element-wrapper .right-bt {
+  right: 30rpx;
+  color: #000;
+}
+
+.animation-element-wrapper .line{
+  display: block;
+  position: fixed;
+  height: 1rpx;
+  width: 100%;
+  margin-top: 89rpx; 
+  background-color: #eeeeee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.luck_list_box{
+  width:710rpx;
+  height:auto;
+  margin:auto;
+   margin-top:12rpx;
+
+
+}
+
+.luck_list_tip{
+  width:100%;
+  height:96rpx;
+  line-height:96rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+     background: #fff;
+        border-radius: 2rpx;
+
+
+}
+
+.luck_list_tip>.my_lucktip{
+  display: block;
+  width:4rpx;
+  height:35rpx;
+  background:#ff5a57;
+  float: left;
+ margin-top:32rpx;
+ margin-left:26rpx;
+
+}
+
+.luck_list_tip>.my_luck{
+  display: block;
+    float: left;
+    margin-left:12rpx;
+
+}
+
+.address_box{
+  width:710rpx;
+  height:auto;
+  margin-top:12rpx;
+     background: #fff;
+       border-radius: 2rpx;
+
+}
+
+.luck_list{
+  width:682rpx;
+  height:118rpx;
+  line-height:118rpx;
+  color: #0a0a0a;
+  font-size: 28rpx;
+  border-top:1rpx solid #ededed;
+  overflow: hidden;
+  margin:auto;
+  display: flex;
+  flex-wrap: 1;
+  align-items: center;
+
+}
+
+.luck_list:nth-child(1){
+  border:none;
+}
+
+.luck_list>.address_tip{
+   margin-left:24rpx;
+}
+
+.luck_list>input,textarea{
+   margin-left:38rpx;
+   font-size: 28rpx;
+   width:470rpx;
+}
+.luck_list>.choos{
+  width:450rpx;
+  margin-left:38rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.luck_list>image{
+  width:16rpx;
+  height:28rpx;
+  margin-left:8rpx;
+}
+
+
+
+.input{
+  color: #999;
+}
+
+
+textarea{
+  height:90rpx;
+  margin-top:64rpx;
+}
+
+.but_box{
+  width:298rpx;
+  height:90rpx;
+  margin:auto;
+  margin-top:70rpx;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.choujiang{
+    width:610rpx;
+  height:88rpx;
+  background: linear-gradient(to right, #fdb34f 0%, #fe8154 50%, #ff5a57 100%);
+  color: #fff;
+  margin:auto;
+  text-align: center;
+  line-height:88rpx;
+  font-size: 34rpx;
+  border-radius:88rpx;
+  box-shadow: 0rpx 8rpx 20rpx 0rpx  #f8e1c4;
+margin-top:72rpx;
+
+}

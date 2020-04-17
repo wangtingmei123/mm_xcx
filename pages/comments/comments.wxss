@@ -1,0 +1,154 @@
+/* pages/tribal/tribal.wxss */
+
+page{
+  padding:0;
+  margin:0;
+  background: #f7f7f7;
+}
+
+.write_box{
+  width:650rpx;
+  height:auto;
+  margin:auto;
+  padding-bottom:50rpx;
+  border-bottom:1rpx solid #ededed;
+}
+
+.textarea{
+  width:100%;
+  height:246rpx;
+  margin:auto;
+  background: #fff;
+  padding:20rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+  margin-top:16rpx;
+
+  /* border:1rpx solid #999; */
+}
+
+.area_tip{
+  width:auto;
+  height:44rpx;
+  font-size: 22rpx;
+  float: right;
+  line-height:44rpx;
+  margin-right:20rpx;
+  color: #c8c8c8;
+}
+
+.submit{
+  width:150rpx;
+  height:64rpx;
+  font-size: 32rpx;
+  line-height:64rpx;
+  border-radius: 10rpx;
+  text-align: center;
+
+  background: #ff5a57;
+  margin:auto;
+    margin-top:30rpx;
+    color: #fff;
+    float: right;
+    margin-right:50rpx;
+
+
+}
+
+.ylimg{
+  width:200rpx;
+  height:200rpx;
+}
+
+.ylimg>image{
+  display: block;
+  width:100%;
+  height:100%;
+}
+
+
+.torefund_box2{
+    width:100%;
+  height:auto;
+  font-size: 28rpx;
+  box-sizing: border-box;
+    overflow: hidden;
+    }
+
+.tfleft{
+    width:100%;
+  height:28rpx;
+  line-height:28rpx;
+  float: left;
+  font-size: 28rpx;
+  color: #000;
+  font-weight: bold;
+  margin-top:40rpx;
+
+}
+
+.tfleft2{
+      width:100%;
+  height:28rpx;
+  line-height:28rpx;
+  float: left;
+  color: #000;
+  font-weight: bold;
+  margin-top:40rpx;
+    font-size: 28rpx;
+  padding-left:20rpx;
+  padding-right:20rpx;
+  box-sizing: border-box;
+}
+
+.tfright{
+  width:100%;
+  height:auto;
+  
+}
+
+.tfright2{
+    width:100%;
+  height:auto;
+}
+
+
+
+.tfrboxsc{
+    width:194rpx;
+  height:194rpx;
+  float: left;
+  margin-left:12rpx;
+  margin-top:12rpx;
+  font-size: 66rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height:194rpx;
+  background: #ededed;
+    border:none;
+
+}
+
+
+.jia{
+  width:66rpx;
+  height:66rpx;
+  vertical-align: middle;
+      line-height:194rpx;
+}
+.tfrboxsca{
+
+      background: #ededed;
+    color: #9d9e9d;
+      border:none;
+}
+
+
+
+.tfrboxscimg{
+  display: block;
+  width:100%;
+  height:100%;
+}
+
+

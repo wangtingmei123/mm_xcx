@@ -1,0 +1,43 @@
+<!--pages/questions/questions.wxml-->
+
+<view class="questions_box" wx:if="{{req_show==1}}">
+    <view class="questions">
+    <image src="../../static/images/images/18dati_03.png"></image>
+          <view class="requert">{{requests.title}}</view>  
+    </view>
+      <view class="quer_box">
+          <view class="quer1 {{daan==1?'quer2':''}}" bindtap="charge2" data-index="1">{{requests.answer1}}
+              <image wx:if="{{show_tip}}" src="../../static/images/images/18dati_11.png"></image>
+          </view>
+          <view class="quer1 {{daan==2?'quer2':''}}" bindtap="charge2"  data-index="2">{{requests.answer2}}  
+              <image wx:if="{{show_tip}}" src="../../static/images/images/18dati_07.png"></image>
+
+          </view>
+      </view>
+      <view class="choujiang" bindtap='queding' wx:if="{{show_tip1}}">确定</view>
+      <view class="choujiang" bindtap='to_shoujiang' wx:if="{{is_prize==1}}">去抽奖</view>
+</view>
+
+
+<view class="questions_more" wx:if="{{req_show==2}}">
+    <image src="../../static/images/images/18zaa_02.png"></image>
+    <view class="dati_box">
+          <view class="dati_tit_box">
+              <view class="dati_tit">{{requests.title}}</view>
+          </view>
+          <view class="dati_center"><image src='../../static/images/images/18ziduoa_03.png'></image></view>
+          <view class='dati_bottom'>
+               <view class="daan1 {{daan==requests.answer1[1]?'daan2':''}}" bindtap="charge2"  data-index="{{requests.answer1[1]}}">{{requests.answer1[0]}}
+                        <image wx:if="{{requests.answer1[1]==requests.true_answer&&show_tip}}" src="../../static/images/images/18ziduo_11.png"></image>
+                        <image wx:if="{{requests.answer1[1]!=requests.true_answer&&daan!=''&&show_tip}}" src="../../static/images/images/18ziduo_07.png"></image>
+               </view>
+               <view class="daan1 {{daan==requests.answer2[1]?'daan2':''}}" bindtap="charge2"  data-index="{{requests.answer2[1]}}">{{requests.answer2[0]}}
+                        <image wx:if="{{requests.answer2[1]==requests.true_answer&&show_tip}}" src="../../static/images/images/18ziduo_11.png"></image>
+                        <image wx:if="{{requests.answer2[1]!=requests.true_answer&&daan!=''&&show_tip}}" src="../../static/images/images/18ziduo_07.png"></image>
+                  
+               </view>
+               <view class="daan1 yes_daan" bindtap='queding' wx:if="{{show_tip1}}">确定</view>
+               <view class="daan1 yes_daan" bindtap='to_shoujiang' wx:if="{{is_prize==1}}">去抽奖</view>
+          </view>
+    </view>
+</view>
